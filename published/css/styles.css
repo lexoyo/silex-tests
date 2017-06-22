@@ -1,184 +1,522 @@
 
-        @import url('//fonts.googleapis.com/css?family=Josefin+Slab');
-        @import url('http://fonts.googleapis.com/css?family=Oxygen:300');
-        .normal {
-            font-size: 12px;
-            font-family: 'Oxygen', sans-serif;
+        @import url('https://fontlibrary.org/face/gidole-regular');
+        body.enable-mobile {
+            padding: 0;
         }
         
-        .title {
-            font-size: 40px;
-            text-transform: uppercase;
-            font-weight: normal;
-            font-family: 'Josefin Slab', serif;
+        div.full-width {
+            left: 0;
+            width: 100%;
         }
         
-        .heading1 {
-            font-size: 16px;
-            line-height: 0px;
-            font-weight: normal;
-            font-family: 'Josefin Slab', serif;
+        div.bg-img {
+            filter: contrast(0.8);
+            -webkit-filter: contrast(0.8);
         }
-        
-        .heading2 {
-            font-size: 40px;
-            line-height: 0px;
-            font-weight: normal;
-        }
-        
-        .heading3 {
-            font-size: 16px;
-            line-height: 0px;
-            font-weight: normal;
-        }
-        /* anim widget for firefox */
-        
-        .paged-element-hidden.animated {
-            animation-name: none !important;
-        }
-        /* */
-        /* remove the space at the top of the site in mobile version */
         
         body {
-            padding: 0 !important;
-        }
-    
-        .silex-id-1439572548860-10 {
-            cursor: auto;
-            left: 0px;
-            top: 0px;
-            background-color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: 'GidoleRegular';
+            color: #4b4b4b;
         }
         
-        .silex-id-1439572548754-9 {
-            top: 5px;
-            left: 163px;
-            width: 1100px;
-            box-sizing: content-box;
+        .header {
+            color: white;
+        }
+        
+        .header h1,
+        .header h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .header h1 {
+            background-color: #53cd9c;
+            display: inline;
+            padding: 20px;
+            line-height: 2.2;
+            font-size: 3em;
+            letter-spacing: 20px;
+        }
+        
+        .header h3 {
+            font-weight: 100;
+        }
+        
+        .button {
+            text-transform: uppercase;
+            font-weight: 100;
+            color: white;
+            background-color: #53cd9c;
+            line-height: 3;
+        }
+        
+        .button.white {
+            background-color: white;
+            color: #4b4b4b;
+        }
+        
+        div.nav {
+            color: white;
+            text-transform: uppercase;
+        }
+        
+        .nav li {
+            list-style: none;
+            display: inline-block;
+            padding: 15px;
+            cursor: pointer;
+            line-height: 0;
+        }
+        
+        .picture-bg {
+            color: white;
+        }
+        
+        .nav a.active-menu {
+            color: #53cd9c;
+        }
+        
+        .text-element {
+            padding: 5px;
+        }
+        
+        div.current h1 {
+            color: #53cd9c;
+        }
+        
+        div.quote {
+            border: 1px solid #4b4b4b;
+            box-shadow: 2px 2px 5px #4b4b4b;
+            padding: 10px;
+            text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+            background-color: #111;
+            background-color: rgba(0, 0, 0, .6);
+        }
+        
+        .mentions a {
+            color: #53cd9c;
+        }
+    
+        .body-initial {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        
+        .silex-id-1488365138615-7 {
+            top: 0px;
+            left: 0px;
+            background-color: rgba(75, 75, 75, 1);
+            background-image: url('../assets/anas-alshanti-169265.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+        
+        .silex-id-1488365138614-6 {
+            min-height: 648px;
             background-color: transparent;
-            min-height: 677px;
+        }
+        
+        .silex-id-1465466601968-0 {
+            min-height: 96px;
+            width: 958px;
+            top: 317px;
+            left: 1px;
+            background-color: transparent;
         }
         
         @media only screen and (max-width: 480px),
         only screen and (max-device-width: 480px) {
-            .silex-id-1439572548754-9 {
+            .silex-id-1465466601968-0 {
                 top: 0px;
-                left: 12px;
-                width: 455px;
-                min-height: 830px;
+                left: 11px;
+                width: 423px;
+                min-height: 182px;
+                background-color: rgba(75, 75, 75, 1);
             }
         }
         
-        .silex-id-1439572548653-8 {
-            width: 235px;
-            top: 80px;
-            left: 558px;
-            box-sizing: content-box;
-            min-height: 24px;
+        .silex-id-1465466727629-1 {
+            min-height: 36px;
+            width: 134px;
+            top: 461px;
+            left: 417px;
         }
         
-        .silex-id-1439572548552-7 {
-            width: 796px;
-            top: 100px;
+        .silex-id-1498051882467-9 {
+            width: 400px;
+            background-color: rgba(83, 205, 156, 1);
+            min-height: 75px;
+            top: 220px;
+            left: 283px;
+        }
+        
+        .silex-id-1498051942935-11 {
+            width: 389px;
+            min-height: 100px;
+            top: 14px;
             left: 0px;
-            box-sizing: content-box;
-            background-image: url('../assets/richard3.jpg');
-            background-color: rgb(0, 0, 0);
-            background-size: auto;
-            background-position-x: 100%;
-            background-position-y: 100%;
-            background-repeat-x: no-repeat;
-            background-repeat-y: no-repeat;
-            min-height: 500px;
+        }
+        
+        .silex-id-1488364699113-3 {
+            top: 630px;
+            left: 0px;
+            background-color: rgba(75, 75, 75, 1);
+        }
+        
+        .silex-id-1488364699112-2 {
+            min-height: 61px;
+            background-color: transparent;
+        }
+        
+        .silex-id-1465466883063-5 {
+            min-height: 62px;
+            width: 960px;
+            top: 1px;
+            left: 0px;
+            background-color: rgba(75, 75, 75, 1);
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1465466883063-5 {
+                top: 231px;
+                left: 11px;
+                width: 423px;
+                min-height: 178px;
+            }
+        }
+        
+        .silex-id-1488364565046-1 {
+            top: 0px;
+            left: 0px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+        
+        .silex-id-1488364565045-0 {
+            min-height: 390px;
+            background-color: transparent;
+        }
+        
+        .silex-id-1465466932973-6 {
+            min-height: 203px;
+            width: 739px;
+            top: 51px;
+            left: 111px;
+        }
+        
+        .silex-id-1465466957804-7 {
+            min-height: 36px;
+            width: 327px;
+            top: 303px;
+            left: 317px;
+        }
+        
+        .silex-id-1488365471671-9 {
+            top: 1209px;
+            left: 5px;
+            min-width: 960px;
+            background-color: rgba(200, 200, 200, 0.5529411764705883);
+        }
+        
+        .silex-id-1488365471670-8 {
+            min-height: 1633px;
+            background-color: transparent;
+            top: 15px;
+            left: 168px;
+            width: 960px;
+        }
+        
+        .silex-id-1465466987435-8 {
+            min-height: 203px;
+            width: 739px;
+            top: 34px;
+            left: 100px;
+        }
+        
+        .silex-id-1465467051246-9 {
+            min-height: 214px;
+            width: 739px;
+            top: 251px;
+            left: 100px;
+        }
+        
+        .silex-id-1465467131521-10 {
+            min-height: 214px;
+            width: 739px;
+            top: 507px;
+            left: 100px;
+        }
+        
+        .silex-id-1465467175975-11 {
+            min-height: 214px;
+            width: 739px;
+            top: 757px;
+            left: 100px;
+        }
+        
+        .silex-id-1465467207085-12 {
+            min-height: 214px;
+            width: 739px;
+            top: 1010px;
+            left: 100px;
+        }
+        
+        .silex-id-1465467207086-13 {
+            min-height: 214px;
+            width: 739px;
+            top: 1281px;
+            left: 100px;
+        }
+        
+        .silex-id-1488365537239-11 {
+            top: 2772px;
+            left: 5px;
+            background-image: url('../assets/markus-spiske-207946.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            min-width: 960px;
+        }
+        
+        .silex-id-1488365537239-10 {
+            min-height: 784px;
+            background-color: transparent;
+            top: 15px;
+            left: 100px;
+            width: 960px;
+        }
+        
+        .silex-id-1498048645025-2 {
+            min-height: 197px;
+            width: 739px;
+            top: 26px;
+            left: 114px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1498048645025-2 {
+                background-color: rgba(75, 75, 75, 1);
+            }
+        }
+        
+        .silex-id-1498047310667-0 {
+            min-height: 100px;
+            width: 400px;
+            background-color: transparent;
+            top: 284px;
+            left: 280px;
+        }
+        
+        .silex-id-1498049112265-3 {
+            min-height: 105px;
+            width: 739px;
+            top: 581px;
+            left: 114px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1498049112265-3 {
+                background-color: rgba(75, 75, 75, 1);
+            }
+        }
+        
+        .silex-id-1493977564770-1 {
+            top: 3773px;
+            left: 5px;
+            min-width: 960px;
+        }
+        
+        .silex-id-1493977564768-0 {
+            width: 960px;
+            min-height: 886px;
+            top: 15px;
+            left: 100px;
+        }
+        
+        .silex-id-1465467258395-16 {
+            min-height: 197px;
+            width: 739px;
+            top: 26px;
+            left: 114px;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1465467258395-16 {
+                background-color: rgba(75, 75, 75, 1);
+            }
+        }
+        
+        .silex-id-1465467307604-17 {
+            min-height: 246px;
+            width: 385px;
+            top: 251px;
+            left: 112px;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1465467307604-17 {
+                top: 2472px;
+                left: 11px;
+                width: 424px;
+                min-height: 187px;
+                background-color: rgba(75, 75, 75, 1);
+            }
+        }
+        
+        .silex-id-1465467342551-18 {
+            min-height: 244px;
+            width: 326px;
+            top: 253px;
+            left: 525px;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1465467342551-18 {
+                top: 2666px;
+                left: 11px;
+                width: 423px;
+                min-height: 188px;
+                background-color: rgba(75, 75, 75, 1);
+            }
+        }
+        
+        .silex-id-1498048301342-1 {
+            min-height: 246px;
+            width: 385px;
+            top: 534px;
+            left: 112px;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1498048301342-1 {
+                top: 2472px;
+                left: 11px;
+                width: 424px;
+                min-height: 187px;
+                background-color: rgba(75, 75, 75, 1);
+            }
+        }
+        
+        .silex-id-1488365805975-19 {
+            top: 4617px;
+            left: 5px;
+            background-color: rgba(75, 75, 75, 1);
+            background-image: url('../assets/lee-aik-soon-39273.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            min-width: 960px;
             background-repeat: no-repeat;
         }
         
+        .silex-id-1488365805974-18 {
+            min-height: 800px;
+            background-color: transparent;
+            top: 15px;
+            left: 100px;
+            width: 960px;
+        }
+        
+        .silex-id-1465477486469-29 {
+            min-height: 111px;
+            width: 739px;
+            top: 53px;
+            left: 102px;
+        }
+        
         @media only screen and (max-width: 480px),
         only screen and (max-device-width: 480px) {
-            .silex-id-1439572548552-7 {
-                top: 7px;
-                left: 16px;
+            .silex-id-1465477486469-29 {
+                background-color: rgba(75, 75, 75, 1);
+                top: 4839px;
+                left: 11px;
                 width: 423px;
-                min-height: 734px;
+                min-height: 117px;
             }
         }
         
-        .silex-id-1439572548242-4 {
-            width: 356px;
-            top: 54px;
-            left: 30px;
-            box-sizing: content-box;
-            min-height: 238px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439572548242-4 {
-                top: 0px;
-                left: 62px;
-                width: 300px;
-                min-height: 765px;
-            }
-        }
-        
-        .silex-id-1439572548345-5 {
-            width: 205px;
-            top: 330px;
-            left: 30px;
-            box-sizing: content-box;
-            min-height: 37px;
-        }
-        
-        .silex-id-1439572548141-3 {
-            width: 188px;
-            top: 0px;
-            left: 30px;
-            box-sizing: content-box;
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
-            border-bottom-right-radius: 8px;
-            border-bottom-left-radius: 8px;
-            background-color: rgb(255, 255, 255);
-            min-height: 25px;
-        }
-        
-        .silex-id-1492778754580-1 {
-            width: 238px;
-            min-height: 68px;
-            background-color: transparent;
-            top: 351px;
-            left: 31px;
-        }
-        
-        .silex-id-1495977370020-0 {
-            height: 115px;
+        .silex-id-1493762242131-1 {
             width: 400px;
+            height: 400px;
             background-color: transparent;
-            top: 334px;
-            left: 356px;
+            top: 215px;
+            left: 283px;
         }
         
-        .silex-id-1439572548039-2 {
-            width: 800px;
-            top: 600px;
+        .silex-id-1498049754831-4 {
+            width: 400px;
+            background-color: rgb(255, 255, 255);
+            min-height: 130px;
+            top: 638px;
+            left: 286px;
+        }
+        
+        .silex-id-1498049784396-5 {
+            width: 400px;
+            min-height: 51px;
+            top: 0px;
             left: 0px;
-            box-sizing: content-box;
-            min-height: 26px;
         }
         
-        .silex-id-1439572547830-0 {
-            width: 437px;
-            top: 56px;
-            left: 30px;
-            box-sizing: content-box;
-            min-height: 40px;
+        .silex-id-1498049972827-6 {
+            width: 50px;
+            min-height: 50px;
+            top: 70px;
+            left: 90px;
         }
         
-        .silex-id-1439572547935-1 {
-            width: 747px;
-            top: 614px;
-            left: 2px;
-            box-sizing: content-box;
-            min-height: 30px;
+        .silex-id-1498050323363-7 {
+            width: 58px;
+            min-height: 58px;
+            top: 67px;
+            left: 215px;
+        }
+        
+        .silex-id-1488365905062-21 {
+            top: 12316px;
+            left: 0px;
+        }
+        
+        .silex-id-1488365905062-20 {
+            min-height: 334px;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .silex-id-1465477779351-34 {
+            min-height: 124px;
+            width: 405px;
+            top: 43px;
+            left: 283px;
+        }
+        
+        .silex-id-1493843819368-0 {
+            width: 400px;
+            min-height: 100px;
+            background-color: transparent;
+            top: 197px;
+            left: 285px;
+        }
+        
+        .silex-id-1442914589168-2 {
+            min-height: 50px;
+            width: 400px;
+            top: 635px;
+            left: 6px;
+            background-color: transparent;
+        }
+        
+        .silex-id-1442914737143-3 {
+            min-height: 28px;
+            width: 250px;
+            top: 13px;
+            left: 80px;
         }
     
