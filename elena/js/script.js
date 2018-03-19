@@ -12,7 +12,7 @@ $(function() {
     // Cache selectors
     var lastId,
         // All list items
-        menuItems = $(".anchor-link"),
+        menuItems = $(".anchor-link, .anchor-container a"),
         // Anchors corresponding to menu items
         // find the name of the elements which are anchors
         scrollItems = menuItems.map(function(){
@@ -58,7 +58,7 @@ $(function() {
             // leave time for the page to open
             // and then scroll
             setTimeout(function() {
-              var offsetTop = $(item).offset().top;
+              var offsetTop = $(item).offset().top - 46;
               $('html, body').stop().animate({
                   scrollTop: offsetTop
               }, 300);
@@ -66,14 +66,32 @@ $(function() {
             }, 100);
         });
     })
-
+    
+    var container = $('.anchor-container');
+    container.each(function() {
+        var el = $(this); 
+        this.setAttribute('data-initial-offset', el.offset().top.toString());
+    });
     // Bind to scroll
-    $(window).scroll(function(){
+    $(window).scroll(checkScroll);
+    checkScroll();
+    function checkScroll(){
        // Get container scroll position
        var fromTop = $(this).scrollTop();
+       // static menu when off screen
+       container.each(function() {
+            var el = $(this); 
+            var containerTop = parseInt(this.getAttribute('data-initial-offset'));
+            if(containerTop < fromTop) {
+               el.addClass('offscreen');
+            }
+            else {
+               el.removeClass('offscreen');
+            }
+       });
        // Get id of current scroll item
        var cur = scrollItems.map(function(){
-         if ($(this.item).offset().top <= fromTop)
+         if ($(this.item).offset().top <= fromTop + 47)
            return this;
        });
        // add the css class on the current menu item
@@ -82,5 +100,5 @@ $(function() {
            cur = cur[cur.length-1];
            $(cur.link).addClass("active-menu");
        }
-    });
+    }
 });
