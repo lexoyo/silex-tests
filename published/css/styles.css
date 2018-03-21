@@ -1,1119 +1,740 @@
 
-        @import url('//fonts.googleapis.com/css?family=Roboto:100');
-        .logo .title {
-            color: #FF9900;
-        }
-        
-        .logo .normal {
-            color: #FEFFFD;
-            font-family: 'Roboto', sans-serif;
-            font-size: 60px;
-            line-height: 25px;
-            min-height: 125px;
-            text-transform: uppercase;
-        }
-        
-        .nav .normal {
-            color: #FEFFFD;
-            font-family: 'Roboto', sans-serif;
-            font-size: 18px;
-            line-height: 45px;
-            text-transform: uppercase;
-            z-index: 1;
-        }
-        
-        .nav-mark {
-            border-bottom: 1px solid #000000;
-            transition: border .2s ease-out, background-color .2s ease-out;
-        }
-        
-        .nav-mark:hover {
-            border-bottom: 1px solid #FF9900;
-        }
-        
-        .nav-mark.page-link-active {
-            background-color: #FF9900;
-        }
-        /* home */
-        
-        .sub-nav.page-link-active {
-            width: 250px;
-            box-shadow: 0 1px 10px black;
-        }
-        
-        .sub-nav {
-            transition: all .15s ease-out;
-            color: #FEFFFD;
-            font-family: 'Roboto', sans-serif;
-            font-size: 25px;
-            line-height: 5px;
-            text-transform: uppercase;
-            z-index: 1;
-        }
-        
-        .sub-nav .heading1 {
-            font-size: 40px;
-        }
-        
         .normal,
-        .heading1 {
-            color: #FEFFFD;
-            font-weight: 200;
-            line-height: 20px;
+        h1,
+        h2,
+        h3 {
+            line-height: 2;
+            font-weight: 100 !important;
         }
         
-        .white-bg .heading2,
-        .white-bg .normal {
-            color: black;
-        }
-        
-        .white-bg .heading2 {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 100;
+        h1 {
             font-size: 40px;
-            text-transform: capitalize;
-            line-height: 0px;
+        }
+        /* for links after published*/
+        
+        body.silex-runtime a:hover {
+            text-decoration: none;
+        }
+        /* remove white space in header in mobile version */
+        
+        body.body-initial {
+            padding-top: 0;
+        }
+        /* hamburger menu */
+        
+        @media (max-width: 480px) {
+            body.silex-runtime.is-not-active .show-when-active {
+                display: none;
+            }
+            body.silex-runtime.is-active .show-when-not-active {
+                display: none;
+            }
         }
         
-        .white-bg .heading2:first-letter {
-            background-color: #FF9900;
-            color: #FEFFFD;
-            padding: 0 10px;
-            margin-right: 2px;
+        @media (min-width: 480px) {
+            .close-btn,
+            .open-btn {
+                cursor: pointer;
+            }
+            /* menu hide */
+            body.silex-runtime .show-when-active {
+                bottom: 100%;
+                top: inherit;
+                position: absolute !important;
+            }
+        }
+        /* menu show */
+        
+        html {
+            background: linear-gradient(to left, #ff7e5f, #feb47b) !important;
+            width: 100%;
+            height: 100%;
         }
         
-        .white-bg .normal {
-            font-size: 15px;
-            font-family: Arial, sans-serif;
-            line-height: 20px;
+        body.silex-runtime {
+            transition: .2s all ease-out;
         }
         
-        .button-read-more .normal {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 100;
-            text-transform: capitalize;
-            line-height: 30px;
+        body.is-active.silex-runtime>.section-element {
+            margin-bottom: -1px;
+        }
+        
+        body.is-active.silex-runtime {
+            box-shadow: 0 -2px 10px 8px rgba(0, 0, 0, 0.11);
+        }
+        
+        body.is-active .show-when-not-active {
+            height: 0;
+        }
+        
+        @media (min-width: 480px) {
+            body.is-active.silex-runtime {
+                transform: scale(0.9, 0.9) translateY(100px);
+            }
+        }
+        /* ************** */
+        /* thumb */
+        
+        @media (min-width: 480px) {
+            .silex-runtime .thumb .text-element {
+                opacity: 0;
+                transition: opacity .5s;
+            }
+        }
+        
+        .silex-runtime .thumb:hover .text-element {
+            opacity: 1;
+        }
+        
+        .silex-runtime .thumb .text-element {
+            width: 100%;
+            left: 0;
+            height: 100%;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .silex-runtime .thumb .text-element .silex-element-content {
+            height: auto;
         }
     
-        .silex-id-1439554967896-66 {
-            left: 0px;
-            top: 0px;
-            background-color: rgb(0, 0, 0);
-            border-top-color: rgb(0, 0, 0);
-            border-right-color: rgb(0, 0, 0);
-            border-bottom-color: rgb(0, 0, 0);
-            border-left-color: rgb(0, 0, 0);
-        }
-        
-        .silex-id-1490693608162-3 {
+        .body-initial {
             background-color: transparent;
-            top: 0px;
-            left: 0px;
-            min-width: 960px;
         }
         
-        .silex-id-1490693608161-2 {
-            min-height: 138px;
+        .silex-id-1496137851436-2 {
+            min-width: 1000px;
             background-color: transparent;
-            top: 15px;
-            left: 647px;
-            width: 960px;
-        }
-        
-        .silex-id-1439554967492-62 {
-            width: 77px;
-            top: 84px;
-            left: 278px;
-            box-sizing: content-box;
-            min-height: 45px;
-        }
-        
-        .silex-id-1439554967286-60 {
-            width: 133px;
-            top: 84px;
-            left: 377px;
-            box-sizing: content-box;
-            min-height: 36px;
-        }
-        
-        .silex-id-1439554966975-57 {
-            width: 133px;
-            top: 83px;
-            left: 529px;
-            box-sizing: content-box;
-            min-height: 37px;
-        }
-        
-        .silex-id-1439554966767-55 {
-            width: 128px;
-            top: 83px;
-            left: 681px;
-            box-sizing: content-box;
-            min-height: 45px;
-        }
-        
-        .silex-id-1439554966563-53 {
-            width: 95px;
-            top: 83px;
-            left: 829px;
-            box-sizing: content-box;
-            min-height: 45px;
-        }
-        
-        .silex-id-1490693355800-0 {
-            width: 129px;
-            min-height: 129px;
-            top: 10px;
-            left: 0px;
-        }
-        
-        .silex-id-1490693798023-5 {
-            background-color: transparent;
-            top: 178px;
+            top: 5px;
             left: 5px;
-            min-width: 960px;
-        }
-        
-        .silex-id-1490693798022-4 {
-            min-height: 474px;
-            background-color: transparent;
-            top: 15px;
-            left: 647px;
-            width: 960px;
-        }
-        
-        .silex-id-1439554966458-52 {
-            width: 960px;
-            top: -14px;
-            left: 0px;
-            box-sizing: content-box;
-            background-color: rgb(0, 0, 0);
-            min-height: 483px;
-        }
-        
-        .silex-id-1439554966357-51 {
-            width: 232px;
-            top: 163px;
-            left: 0px;
-            box-sizing: content-box;
-            border-top-color: rgb(255, 255, 255);
-            border-right-color: rgb(255, 255, 255);
-            border-bottom-color: rgb(255, 255, 255);
-            border-left-color: rgb(255, 255, 255);
-            border-top-width: 0px;
-            border-right-width: 3px;
-            border-bottom-width: 0px;
-            border-left-width: 0px;
-            border-top-style: solid;
-            border-right-style: solid;
-            border-bottom-style: solid;
-            border-left-style: solid;
-            background-color: rgb(102, 88, 71);
-            min-height: 158px;
         }
         
         @media only screen and (max-width: 480px),
         only screen and (max-device-width: 480px) {
-            .silex-id-1439554966357-51 {
-                top: 0px;
-                left: 93px;
-                width: 234px;
-                min-height: 158px;
+            .silex-id-1496137851436-2 {
+                top: 60px;
+                left: 0px;
             }
         }
         
-        .silex-id-1439554966255-50 {
-            width: 183px;
-            top: 22px;
-            left: 45px;
-            box-sizing: content-box;
-            min-height: 118px;
-        }
-        
-        .silex-id-1439554966154-49 {
-            width: 232px;
-            top: 5px;
-            left: 0px;
-            box-sizing: content-box;
-            border-top-color: rgb(255, 255, 255);
-            border-right-color: rgb(255, 255, 255);
-            border-bottom-color: rgb(255, 255, 255);
-            border-left-color: rgb(255, 255, 255);
-            border-top-width: 0px;
-            border-right-width: 3px;
-            border-bottom-width: 0px;
-            border-left-width: 0px;
-            border-top-style: solid;
-            border-right-style: solid;
-            border-bottom-style: solid;
-            border-left-style: solid;
-            background-color: rgb(255, 153, 0);
-            min-height: 158px;
-        }
-        
-        .silex-id-1439554966050-48 {
-            width: 183px;
-            top: 17px;
-            left: 45px;
-            box-sizing: content-box;
-            min-height: 104px;
-        }
-        
-        .silex-id-1439554965843-46 {
-            width: 232px;
-            top: 321px;
-            left: 0px;
-            box-sizing: content-box;
-            border-top-color: rgb(255, 255, 255);
-            border-right-color: rgb(255, 255, 255);
-            border-bottom-color: rgb(255, 255, 255);
-            border-left-color: rgb(255, 255, 255);
-            border-top-width: 0px;
-            border-right-width: 3px;
-            border-bottom-width: 0px;
-            border-left-width: 0px;
-            border-top-style: solid;
-            border-right-style: solid;
-            border-bottom-style: solid;
-            border-left-style: solid;
-            background-color: rgb(61, 54, 45);
-            min-height: 158px;
-        }
-        
-        .silex-id-1439554965740-45 {
-            width: 183px;
-            top: 22px;
-            left: 45px;
-            box-sizing: content-box;
-            min-height: 104px;
-        }
-        
-        .silex-id-1439554965638-44 {
-            width: 726px;
-            top: 5px;
-            left: 232px;
-            box-sizing: content-box;
-            background-image: url('../assets/UJO0jYLtRte4qpyA37Xu_9X6A7388.jpg');
-            background-color: transparent;
-            background-size: cover;
-            min-height: 474px;
-        }
-        
-        .silex-id-1439554965536-43 {
-            width: 726px;
-            top: 6px;
-            left: 233px;
-            box-sizing: content-box;
-            background-image: url('../assets/8bc72ed7.jpg');
-            background-color: transparent;
-            background-size: cover;
-            min-height: 474px;
-        }
-        
-        .silex-id-1439554965947-47 {
-            width: 726px;
-            top: -10px;
-            left: 232px;
-            box-sizing: content-box;
-            background-image: url('../assets/xpdPwXTASnOUXFpIPgDs_IMG_1460_edt.jpg');
-            background-color: transparent;
-            background-size: cover;
-            min-height: 474px;
-        }
-        
-        .silex-id-1490693931165-7 {
-            background-color: transparent;
-            top: 686px;
-            left: 0px;
-            min-width: 960px;
-        }
-        
-        .silex-id-1490693931163-6 {
-            min-height: 703px;
-            background-color: transparent;
+        .silex-id-1496137851435-1 {
+            width: 1000px;
+            min-height: 135px;
             top: 15px;
-            left: 545px;
-            width: 960px;
-        }
-        
-        .silex-id-1439554965432-42 {
-            width: 960px;
-            top: -9px;
-            left: 0px;
-            box-sizing: content-box;
-            background-color: rgb(254, 255, 253);
-            min-height: 309px;
+            left: 385px;
         }
         
         @media only screen and (max-width: 480px),
         only screen and (max-device-width: 480px) {
-            .silex-id-1439554965432-42 {
-                top: 141px;
+            .silex-id-1496137851435-1 {
+                min-height: 340px;
+            }
+        }
+        
+        .silex-id-1496159080195-1 {
+            width: 200px;
+            min-height: 45px;
+            top: 52px;
+            left: 0px;
+        }
+        
+        .silex-id-1496138076573-3 {
+            width: 92px;
+            min-height: 20px;
+            top: 63px;
+            left: 518px;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496138076573-3 {
+                top: 45px;
                 left: 11px;
                 width: 423px;
-                min-height: 979px;
+                min-height: 32px;
             }
         }
         
-        .silex-id-1439554965331-41 {
-            width: 290px;
-            top: 26px;
-            left: 37px;
-            box-sizing: content-box;
-            border-top-width: 0px;
-            border-right-width: 1px;
-            border-bottom-width: 0px;
-            border-left-width: 0px;
-            border-top-style: solid;
-            border-right-style: solid;
-            border-bottom-style: solid;
-            border-left-style: solid;
-            border-top-color: rgb(102, 88, 71);
-            border-right-color: rgb(102, 88, 71);
-            border-bottom-color: rgb(102, 88, 71);
-            border-left-color: rgb(102, 88, 71);
-            background-color: transparent;
-            min-height: 254px;
+        .silex-id-1496149356935-6 {
+            width: 92px;
+            min-height: 20px;
+            top: 63px;
+            left: 638px;
         }
         
         @media only screen and (max-width: 480px),
         only screen and (max-device-width: 480px) {
-            .silex-id-1439554965331-41 {
-                top: 32px;
-                left: 10px;
-                width: 402px;
-                min-height: 262px;
-            }
-        }
-        
-        .silex-id-1439554965129-39 {
-            width: 283px;
-            top: -6px;
-            left: 0px;
-            box-sizing: content-box;
-            min-height: 60px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554965129-39 {
-                top: 91px;
-                left: 10px;
-                width: 382px;
-                min-height: 67px;
-            }
-        }
-        
-        .silex-id-1439554965028-38 {
-            width: 260px;
-            top: 66px;
-            left: 0px;
-            box-sizing: content-box;
-            border-top-width: 5px;
-            border-right-width: 5px;
-            border-bottom-width: 5px;
-            border-left-width: 5px;
-            border-top-style: solid;
-            border-right-style: solid;
-            border-bottom-style: solid;
-            border-left-style: solid;
-            border-top-color: rgb(0, 0, 0);
-            border-right-color: rgb(0, 0, 0);
-            border-bottom-color: rgb(0, 0, 0);
-            border-left-color: rgb(0, 0, 0);
-            border-image-source: initial;
-            border-image-slice: initial;
-            border-image-width: initial;
-            border-image-outset: initial;
-            border-image-repeat: initial;
-            background-image: url('../assets/wood.jpg');
-            background-color: rgb(0, 0, 0);
-            background-size: cover;
-            min-height: 94px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554965028-38 {
-                top: 158px;
-                left: 5px;
-                width: 382px;
-                min-height: 94px;
-            }
-        }
-        
-        .silex-id-1439554965230-40 {
-            width: 266px;
-            top: 169px;
-            left: 3px;
-            box-sizing: content-box;
-            min-height: 91px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554965230-40 {
-                top: 0px;
-                left: 10px;
-                width: 382px;
-                min-height: 91px;
-            }
-        }
-        
-        .silex-id-1439554964925-37 {
-            width: 290px;
-            top: 26px;
-            left: 345px;
-            box-sizing: content-box;
-            border-top-width: 0px;
-            border-right-width: 1px;
-            border-bottom-width: 0px;
-            border-left-width: 0px;
-            border-top-style: solid;
-            border-right-style: solid;
-            border-bottom-style: solid;
-            border-left-style: solid;
-            border-top-color: rgb(102, 88, 71);
-            border-right-color: rgb(102, 88, 71);
-            border-bottom-color: rgb(102, 88, 71);
-            border-left-color: rgb(102, 88, 71);
-            background-color: transparent;
-            min-height: 254px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554964925-37 {
-                top: 359px;
-                left: 10px;
-                width: 402px;
-                min-height: 262px;
-            }
-        }
-        
-        .silex-id-1439554964619-34 {
-            width: 283px;
-            top: -6px;
-            left: 0px;
-            box-sizing: content-box;
-            min-height: 60px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554964619-34 {
-                top: 196px;
-                left: 10px;
-                width: 382px;
-                min-height: 66px;
-            }
-        }
-        
-        .silex-id-1439554964822-36 {
-            width: 260px;
-            top: 66px;
-            left: 0px;
-            box-sizing: content-box;
-            border-top-width: 5px;
-            border-right-width: 5px;
-            border-bottom-width: 5px;
-            border-left-width: 5px;
-            border-top-style: solid;
-            border-right-style: solid;
-            border-bottom-style: solid;
-            border-left-style: solid;
-            border-top-color: rgb(0, 0, 0);
-            border-right-color: rgb(0, 0, 0);
-            border-bottom-color: rgb(0, 0, 0);
-            border-left-color: rgb(0, 0, 0);
-            border-image-source: initial;
-            border-image-slice: initial;
-            border-image-width: initial;
-            border-image-outset: initial;
-            border-image-repeat: initial;
-            background-image: url('../assets/night.jpg');
-            background-color: rgb(0, 0, 0);
-            background-size: cover;
-            min-height: 94px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554964822-36 {
-                top: 0px;
-                left: 5px;
-                width: 382px;
-                min-height: 94px;
-            }
-        }
-        
-        .silex-id-1439554964720-35 {
-            width: 266px;
-            top: 169px;
-            left: 3px;
-            box-sizing: content-box;
-            min-height: 91px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554964720-35 {
-                top: 104px;
-                left: 10px;
-                width: 382px;
-                min-height: 91px;
-            }
-        }
-        
-        .silex-id-1439554964518-33 {
-            width: 290px;
-            top: 26px;
-            left: 656px;
-            box-sizing: content-box;
-            border-top-color: rgb(102, 88, 71);
-            border-right-color: rgb(102, 88, 71);
-            border-bottom-color: rgb(102, 88, 71);
-            border-left-color: rgb(102, 88, 71);
-            background-color: transparent;
-            min-height: 254px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554964518-33 {
-                top: 685px;
-                left: 11px;
-                width: 414px;
-                min-height: 262px;
-            }
-        }
-        
-        .silex-id-1439554964214-30 {
-            width: 283px;
-            top: -6px;
-            left: 0px;
-            box-sizing: content-box;
-            min-height: 60px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554964214-30 {
-                top: 196px;
-                left: 10px;
-                width: 394px;
-                min-height: 66px;
-            }
-        }
-        
-        .silex-id-1439554964416-32 {
-            width: 260px;
-            top: 66px;
-            left: 0px;
-            box-sizing: content-box;
-            border-top-width: 5px;
-            border-right-width: 5px;
-            border-bottom-width: 5px;
-            border-left-width: 5px;
-            border-top-style: solid;
-            border-right-style: solid;
-            border-bottom-style: solid;
-            border-left-style: solid;
-            border-top-color: rgb(0, 0, 0);
-            border-right-color: rgb(0, 0, 0);
-            border-bottom-color: rgb(0, 0, 0);
-            border-left-color: rgb(0, 0, 0);
-            border-image-source: initial;
-            border-image-slice: initial;
-            border-image-width: initial;
-            border-image-outset: initial;
-            border-image-repeat: initial;
-            background-image: url('../assets/bench.jpg');
-            background-color: rgb(0, 0, 0);
-            background-size: cover;
-            min-height: 94px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554964416-32 {
-                top: 0px;
-                left: 5px;
-                width: 394px;
-                min-height: 94px;
-            }
-        }
-        
-        .silex-id-1439554964315-31 {
-            width: 266px;
-            top: 169px;
-            left: 3px;
-            box-sizing: content-box;
-            min-height: 91px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554964315-31 {
-                top: 104px;
-                left: 10px;
-                width: 394px;
-                min-height: 91px;
-            }
-        }
-        
-        .silex-id-1439554964011-28 {
-            width: 225px;
-            top: 334px;
-            left: 41px;
-            box-sizing: content-box;
-            min-height: 61px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554964011-28 {
-                top: 1603px;
+            .silex-id-1496149356935-6 {
+                top: 77px;
                 left: 11px;
                 width: 423px;
-                min-height: 90px;
+                min-height: 32px;
             }
         }
         
-        .silex-id-1439554963909-27 {
-            width: 47px;
-            top: 327px;
-            left: 310px;
-            box-sizing: content-box;
-            min-height: 68px;
-        }
-        
-        .silex-id-1439554964112-29 {
-            width: 592px;
-            top: 333px;
-            left: 342px;
-            box-sizing: content-box;
-            min-height: 111px;
+        .silex-id-1496149361299-7 {
+            width: 92px;
+            min-height: 20px;
+            top: 63px;
+            left: 757px;
         }
         
         @media only screen and (max-width: 480px),
         only screen and (max-device-width: 480px) {
-            .silex-id-1439554964112-29 {
-                top: 1183px;
-                left: 57px;
-                width: 331px;
-                min-height: 172px;
-            }
-        }
-        
-        .silex-id-1439554963809-26 {
-            width: 47px;
-            top: 399px;
-            left: 647px;
-            box-sizing: content-box;
-            min-height: 68px;
-        }
-        
-        .silex-id-1439554963707-25 {
-            width: 280px;
-            top: 469px;
-            left: 25px;
-            box-sizing: content-box;
-            background-color: transparent;
-            min-height: 215px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554963707-25 {
-                top: 1241px;
+            .silex-id-1496149361299-7 {
+                top: 110px;
                 left: 11px;
                 width: 423px;
-                min-height: 215px;
+                min-height: 32px;
             }
         }
         
-        .silex-id-1439554963605-24 {
-            width: 276px;
-            top: 14px;
-            left: 14px;
-            box-sizing: content-box;
-            min-height: 147px;
+        .silex-id-1496162110372-8 {
+            width: 30px;
+            min-height: 30px;
+            top: 54px;
+            left: 974px;
         }
         
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554963605-24 {
-                top: 5px;
-                left: 11px;
-                width: 401px;
-                min-height: 160px;
-            }
-        }
-        
-        .silex-id-1439554963502-23 {
-            width: 113px;
-            top: 166px;
-            left: 16px;
-            box-sizing: content-box;
-            background-color: rgba(102, 88, 71, 1);
-            min-height: 34px;
-        }
-        
-        .silex-id-1439554963400-22 {
-            width: 280px;
-            top: 469px;
-            left: 332px;
-            box-sizing: content-box;
-            background-color: transparent;
-            min-height: 215px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554963400-22 {
-                top: 1456px;
-                left: 11px;
-                width: 423px;
-                min-height: 215px;
-            }
-        }
-        
-        .silex-id-1439554963298-21 {
-            width: 276px;
-            top: 14px;
-            left: 14px;
-            box-sizing: content-box;
-            min-height: 147px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554963298-21 {
-                top: 5px;
-                left: 11px;
-                width: 401px;
-                min-height: 160px;
-            }
-        }
-        
-        .silex-id-1439554963198-20 {
-            width: 113px;
-            top: 166px;
-            left: 16px;
-            box-sizing: content-box;
-            background-color: rgb(102, 88, 71);
-            min-height: 34px;
-        }
-        
-        .silex-id-1439554963096-19 {
-            width: 280px;
-            top: 469px;
-            left: 639px;
-            box-sizing: content-box;
-            background-color: transparent;
-            min-height: 215px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554963096-19 {
-                top: 1671px;
-                left: 11px;
-                width: 423px;
-                min-height: 215px;
-            }
-        }
-        
-        .silex-id-1439554962995-18 {
-            width: 276px;
-            top: 14px;
-            left: 14px;
-            box-sizing: content-box;
-            min-height: 147px;
-        }
-        
-        @media only screen and (max-width: 480px),
-        only screen and (max-device-width: 480px) {
-            .silex-id-1439554962995-18 {
-                top: 5px;
-                left: 11px;
-                width: 401px;
-                min-height: 160px;
-            }
-        }
-        
-        .silex-id-1439554962893-17 {
-            width: 113px;
-            top: 166px;
-            left: 16px;
-            box-sizing: content-box;
-            background-color: rgba(102, 88, 71, 1);
-            min-height: 34px;
-        }
-        
-        .silex-id-1490694258064-17 {
-            background-color: transparent;
-            top: 171px;
-            left: 0px;
-            border-color: #000000;
-            min-width: 960px;
-        }
-        
-        .silex-id-1490694258062-16 {
-            min-height: 744px;
-            background-color: transparent;
-            border-color: #000000;
-            top: 15px;
-            left: 329px;
-            width: 960px;
-        }
-        
-        .silex-id-1492776401689-1 {
-            width: 456px;
-            height: 587px;
-            background-color: transparent;
-            top: 83px;
-            left: 1px;
-        }
-        
-        .silex-id-1492776672785-2 {
-            height: 571px;
-            width: 472px;
-            background-color: transparent;
-            top: 91px;
-            left: 487px;
-            border-width: 1px 1px 1px 1px;
-            border-style: solid;
-            border-color: #ffffff;
-        }
-        
-        .silex-id-1490694152451-11 {
-            background-color: transparent;
-            top: 433px;
-            left: NaNpx;
-            min-width: 960px;
-        }
-        
-        .silex-id-1490694152449-10 {
-            min-height: 236px;
-            background-color: transparent;
-            top: 15px;
-            left: 545px;
-            width: 960px;
-        }
-        
-        .silex-id-1439554961635-5 {
-            width: 817px;
-            top: 31px;
-            left: 2px;
-            box-sizing: content-box;
-            min-height: 189px;
-        }
-        
-        .silex-id-1490701849669-19 {
-            background-color: transparent;
-            top: 159px;
-            left: 0px;
-            min-width: 960px;
-            background-image: url('../assets/UJO0jYLtRte4qpyA37Xu_9X6A7388.jpg');
-            background-size: cover;
-            background-position: center center;
-        }
-        
-        .silex-id-1490701849668-18 {
-            min-height: 480px;
-            background-color: transparent;
-            top: 15px;
-            left: 545px;
-            width: 960px;
-        }
-        
-        .silex-id-1490694217944-13 {
-            background-color: transparent;
-            top: 171px;
-            left: 0px;
-        }
-        
-        .silex-id-1490694217944-12 {
-            min-height: 236px;
-            background-color: transparent;
-        }
-        
-        .silex-id-1439554961432-3 {
-            width: 817px;
-            top: 31px;
-            left: 2px;
-            box-sizing: content-box;
-            min-height: 189px;
-        }
-        
-        .silex-id-1490701905049-21 {
-            background-color: transparent;
+        .silex-id-1478366444112-1 {
             top: 100px;
             left: NaNpx;
-            background-image: url('../assets/nQZcA7PRTyuduZPSZQ88_wanderlust.jpg');
-            background-size: cover;
-            background-position: center center;
+            background-color: rgba(255, 255, 255, 1);
+            min-width: 1000px;
         }
         
-        .silex-id-1490701905043-20 {
-            min-height: 480px;
+        .silex-id-1478366444112-0 {
+            min-height: 133px;
             background-color: transparent;
-        }
-        
-        .silex-id-1490694237194-15 {
-            background-color: transparent;
-            top: 171px;
-            left: 0px;
-            min-width: 960px;
-        }
-        
-        .silex-id-1490694237193-14 {
-            min-height: 232px;
-            background-color: transparent;
+            width: 1000px;
             top: 15px;
-            left: 545px;
-            width: 960px;
+            left: 385px;
         }
         
-        .silex-id-1439554961331-2 {
-            width: 817px;
-            top: 31px;
-            left: 2px;
-            box-sizing: content-box;
-            min-height: 189px;
-        }
-        
-        .silex-id-1490701944668-23 {
-            background-color: transparent;
-            top: 100px;
-            left: NaNpx;
-            background-image: url('../assets/xpdPwXTASnOUXFpIPgDs_IMG_1460_edt.jpg');
-            background-size: cover;
-            background-position: bottom center;
-        }
-        
-        .silex-id-1490701944667-22 {
-            min-height: 480px;
-            background-color: transparent;
-        }
-        
-        .silex-id-1490694042605-9 {
-            background-color: transparent;
-            top: 931px;
+        .silex-id-1496137172968-2 {
+            width: 200px;
+            min-height: 45px;
+            top: 46px;
             left: 0px;
         }
         
-        .silex-id-1490694042604-8 {
-            min-height: 269px;
+        .silex-id-1496160336487-5 {
+            width: 30px;
+            min-height: 30px;
+            top: 56px;
+            left: 969px;
+        }
+        
+        .silex-id-1496169913595-60 {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        
+        .silex-id-1496169913594-59 {
+            min-height: 100px;
+        }
+        
+        .silex-id-1474394621033-3 {
+            top: 5px;
+            left: 0px;
+            background-color: rgba(255, 255, 255, 1);
+            min-width: 1000px;
+        }
+        
+        .silex-id-1474394621032-2 {
+            min-height: 373px;
             background-color: transparent;
+            width: 1000px;
+            top: 15px;
+            left: 408px;
         }
         
-        .silex-id-1439554962589-14 {
-            width: 88px;
-            top: 88px;
-            left: 834px;
-            min-height: 37px;
+        .silex-id-1496136970330-0 {
+            width: 781px;
+            min-height: 150px;
+            top: 25px;
+            left: 114px;
         }
         
-        .silex-id-1439554962691-15 {
-            width: 264px;
-            top: 85px;
-            left: 37px;
-            box-sizing: content-box;
-            min-height: 67px;
+        .silex-id-1496162471647-9 {
+            width: 147px;
+            min-height: 68px;
+            background-color: transparent;
+            top: 234px;
+            left: 408px;
+        }
+        
+        .silex-id-1496148764365-5 {
+            top: 751px;
+            left: 5px;
+            background-color: rgba(255, 255, 255, 1);
+            min-width: 1000px;
         }
         
         @media only screen and (max-width: 480px),
         only screen and (max-device-width: 480px) {
-            .silex-id-1439554962691-15 {
-                top: 2000px;
-                left: 13px;
-                width: 419px;
-                min-height: 125px;
+            .silex-id-1496148764365-5 {
+                top: 899px;
+                left: 0px;
             }
         }
         
-        .silex-id-1439554962488-13 {
-            width: 40px;
-            top: 86px;
-            left: 771px;
-            min-height: 40px;
+        .silex-id-1496148764363-4 {
+            width: 1000px;
+            min-height: 1129px;
+            top: 15px;
+            left: 478px;
         }
         
-        .silex-id-1439554962386-12 {
-            width: 25px;
-            top: 139px;
-            left: 663px;
-            box-sizing: content-box;
-            min-height: 34.5676px;
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496148764363-4 {
+                min-height: 3015px;
+            }
         }
         
-        .silex-id-1439554962283-11 {
-            width: 240px;
-            top: 127px;
-            left: 698px;
-            box-sizing: content-box;
+        .silex-id-1496166951111-22 {
+            width: 300px;
+            background-color: transparent;
+            min-height: 300px;
+            top: 30px;
+            left: 30px;
+            background-image: url('../assets/clark-street-mercantile-33931.jpg');
+            background-size: cover;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496166951111-22 {
+                top: 0px;
+                left: 11px;
+                width: 423px;
+                min-height: 300px;
+            }
+        }
+        
+        .silex-id-1496167267077-28 {
+            width: 100px;
+            min-height: 100px;
+            top: 96px;
+            left: 103px;
+            background-color: rgba(255, 255, 255, 0.7843137254901961);
+        }
+        
+        .silex-id-1496166978739-23 {
+            width: 300px;
+            background-color: transparent;
+            min-height: 300px;
+            top: 30px;
+            left: 350px;
+            background-image: url('../assets/clem-onojeghuo-160190.jpg');
+            background-size: cover;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496166978739-23 {
+                top: 300px;
+                left: 11px;
+                width: 423px;
+                min-height: 300px;
+            }
+        }
+        
+        .silex-id-1496168398768-29 {
+            width: 130px;
+            min-height: 133px;
+            top: 105px;
+            left: 100px;
+            background-color: rgba(255, 255, 255, 0.7843137254901961);
+        }
+        
+        .silex-id-1496166990971-24 {
+            width: 300px;
+            background-color: transparent;
+            min-height: 300px;
+            top: 30px;
+            left: 670px;
+            background-image: url('../assets/crew-59379.jpg');
+            background-size: cover;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496166990971-24 {
+                top: 600px;
+                left: 11px;
+                width: 423px;
+                min-height: 300px;
+            }
+        }
+        
+        .silex-id-1496168438145-30 {
+            width: 100px;
+            min-height: 100px;
+            top: 112px;
+            left: 80px;
+            background-color: rgba(255, 255, 255, 0.7843137254901961);
+        }
+        
+        .silex-id-1496167019983-25 {
+            width: 300px;
+            background-color: transparent;
+            min-height: 300px;
+            top: 400px;
+            left: 30px;
+            background-image: url('../assets/david-cohen-172050.jpg');
+            background-size: cover;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496167019983-25 {
+                top: 900px;
+                left: 11px;
+                width: 423px;
+                min-height: 300px;
+            }
+        }
+        
+        .silex-id-1496168456982-33 {
+            width: 100px;
+            min-height: 100px;
+            top: 79px;
+            left: 104px;
+            background-color: rgba(255, 255, 255, 0.7843137254901961);
+        }
+        
+        .silex-id-1496167019994-27 {
+            width: 300px;
+            background-color: transparent;
+            min-height: 300px;
+            top: 400px;
+            left: 670px;
+            background-image: url('../assets/timothy-muza-572.jpg');
+            background-size: cover;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496167019994-27 {
+                top: 1200px;
+                left: 11px;
+                width: 423px;
+                min-height: 300px;
+            }
+        }
+        
+        .silex-id-1496168453028-32 {
+            width: 130px;
+            min-height: 133px;
+            top: 76px;
+            left: 116px;
+            background-color: rgba(255, 255, 255, 0.7843137254901961);
+        }
+        
+        .silex-id-1496167019992-26 {
+            width: 300px;
+            background-color: transparent;
+            min-height: 300px;
+            top: 400px;
+            left: 350px;
+            background-image: url('../assets/freestocks-org-182582.jpg');
+            background-size: cover;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496167019992-26 {
+                top: 1500px;
+                left: 11px;
+                width: 423px;
+                min-height: 300px;
+            }
+        }
+        
+        .silex-id-1496168449616-31 {
+            width: 100px;
+            min-height: 100px;
+            top: 80px;
+            left: 113px;
+            background-color: rgba(255, 255, 255, 0.7843137254901961);
+        }
+        
+        .silex-id-1496168814589-44 {
+            width: 300px;
+            background-color: transparent;
+            min-height: 300px;
+            top: 770px;
+            left: 670px;
+            background-image: url('../assets/clem-onojeghuo-160190.jpg');
+            background-size: cover;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496168814589-44 {
+                top: 1800px;
+                left: 11px;
+                width: 423px;
+                min-height: 300px;
+            }
+        }
+        
+        .silex-id-1496168814589-45 {
+            width: 130px;
+            min-height: 148px;
+            top: 90px;
+            left: 100px;
+            background-color: rgba(255, 255, 255, 0.7843137254901961);
+        }
+        
+        .silex-id-1496168814592-46 {
+            width: 300px;
+            background-color: transparent;
+            min-height: 300px;
+            top: 770px;
+            left: 30px;
+            background-image: url('../assets/crew-59379.jpg');
+            background-size: cover;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496168814592-46 {
+                top: 2100px;
+                left: 11px;
+                width: 423px;
+                min-height: 300px;
+            }
+        }
+        
+        .silex-id-1496168814592-47 {
+            width: 100px;
+            min-height: 100px;
+            top: 112px;
+            left: 80px;
+            background-color: rgba(255, 255, 255, 0.7843137254901961);
+        }
+        
+        .silex-id-1496168814577-42 {
+            width: 300px;
+            background-color: transparent;
+            min-height: 300px;
+            top: 770px;
+            left: 350px;
+            background-image: url('../assets/clark-street-mercantile-33931.jpg');
+            background-size: cover;
+        }
+        
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496168814577-42 {
+                top: 2400px;
+                left: 11px;
+                width: 423px;
+                min-height: 300px;
+            }
+        }
+        
+        .silex-id-1496168814577-43 {
+            width: 100px;
+            min-height: 100px;
+            top: 96px;
+            left: 103px;
+            background-color: rgba(255, 255, 255, 0.7843137254901961);
+        }
+        
+        .silex-id-1496168536497-35 {
+            background-color: rgba(255, 255, 255, 1);
+            top: 343px;
+            left: 5px;
+            min-width: 1000px;
+        }
+        
+        .silex-id-1496168536496-34 {
+            width: 1000px;
+            min-height: 666px;
+            top: 15px;
+            left: 598px;
+            background-image: url('../assets/clem-onojeghuo-173078.jpg');
+            background-size: cover;
+            background-position: top center;
+        }
+        
+        .silex-id-1496169474610-49 {
+            background-color: rgba(255, 255, 255, 1);
+            top: 1044px;
+            left: 5px;
+            min-width: 1000px;
+        }
+        
+        .silex-id-1496169474609-48 {
+            width: 1000px;
+            min-height: 406px;
+            top: 15px;
+            left: 598px;
+        }
+        
+        .silex-id-1496169503613-50 {
+            width: 1000px;
+            min-height: 332px;
+            top: 31px;
+            left: 0px;
+        }
+        
+        .silex-id-1496169649756-52 {
+            background-color: rgba(255, 255, 255, 1);
+            min-width: 1000px;
+        }
+        
+        .silex-id-1496169649755-51 {
+            width: 1000px;
+            min-height: 809px;
+            top: 15px;
+            left: 598px;
+        }
+        
+        .silex-id-1496169673047-55 {
+            width: 480px;
+            background-color: transparent;
+            min-height: 325px;
+            top: 100px;
+            left: 0px;
+            background-image: url('../assets/freestocks-org-182582.jpg');
+            background-size: cover;
+        }
+        
+        .silex-id-1496169673047-56 {
+            width: 195px;
+            min-height: 159px;
+            top: 75px;
+            left: 128px;
+            background-color: rgba(255, 255, 255, 0.7843137254901961);
+        }
+        
+        .silex-id-1496169687166-57 {
+            width: 326px;
             min-height: 52px;
+            top: 19px;
+            left: 0px;
+        }
+        
+        .silex-id-1496169673037-53 {
+            width: 480px;
+            background-color: transparent;
+            min-height: 325px;
+            top: 100px;
+            left: 520px;
+            background-image: url('../assets/david-cohen-172050.jpg');
+            background-size: cover;
+        }
+        
+        .silex-id-1496169673037-54 {
+            width: 210px;
+            min-height: 158px;
+            top: 86px;
+            left: 136px;
+            background-color: rgba(255, 255, 255, 0.7843137254901961);
+        }
+        
+        .silex-id-1496169810519-58 {
+            width: 1000px;
+            min-height: 332px;
+            top: 443px;
+            left: -1px;
+        }
+        
+        .silex-id-1478366450713-3 {
+            top: 100px;
+            left: NaNpx;
+            background-color: rgba(255, 255, 255, 1);
+            min-width: 1000px;
+        }
+        
+        .silex-id-1478366450713-2 {
+            min-height: 391px;
+            background-color: transparent;
+            width: 1000px;
+            top: 15px;
+            left: 478px;
+        }
+        
+        .silex-id-1442914737143-3 {
+            min-height: 53px;
+            width: 349px;
+            top: 172px;
+            left: 354px;
         }
         
         @media only screen and (max-width: 480px),
         only screen and (max-device-width: 480px) {
-            .silex-id-1439554962283-11 {
-                top: 2129px;
-                left: 1px;
-                width: 240px;
-                min-height: 38px;
+            .silex-id-1442914737143-3 {
+                top: 57px;
+                left: 11px;
+                width: 423px;
+                min-height: 96px;
             }
         }
         
-        .silex-id-1439554962181-10 {
-            width: 102px;
-            top: 136px;
-            left: 539px;
-            box-sizing: content-box;
-            min-height: 45px;
+        .silex-id-1496168656864-38 {
+            width: 92px;
+            min-height: 20px;
+            top: 45px;
+            left: 606px;
         }
         
-        .silex-id-1439554962078-9 {
-            width: 133px;
-            top: 136px;
-            left: 400px;
-            box-sizing: content-box;
-            min-height: 45px;
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496168656864-38 {
+                top: 194px;
+                left: 10px;
+                width: 128px;
+                min-height: 32px;
+            }
         }
         
-        .silex-id-1439554961964-8 {
-            width: 146px;
-            top: 136px;
-            left: 247px;
-            box-sizing: content-box;
-            min-height: 45px;
+        .silex-id-1496168656861-37 {
+            width: 92px;
+            min-height: 20px;
+            top: 45px;
+            left: 476px;
         }
         
-        .silex-id-1439554961840-7 {
-            width: 134px;
-            top: 136px;
-            left: 107px;
-            box-sizing: content-box;
-            min-height: 45px;
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496168656861-37 {
+                top: 194px;
+                left: 159px;
+                width: 128px;
+                min-height: 32px;
+            }
         }
         
-        .silex-id-1439554961739-6 {
-            width: 65px;
-            top: 136px;
-            left: 37px;
-            box-sizing: content-box;
-            min-height: 45px;
+        .silex-id-1496168656857-36 {
+            width: 92px;
+            min-height: 20px;
+            top: 45px;
+            left: 338px;
         }
         
-        .silex-id-1439554962792-16 {
-            width: 600px;
-            top: 208px;
-            left: 180px;
-            box-sizing: content-box;
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px) {
+            .silex-id-1496168656857-36 {
+                top: 194px;
+                left: 307px;
+                width: 128px;
+                min-height: 32px;
+            }
+        }
+        
+        .silex-id-1496168764134-41 {
+            width: 147px;
+            min-height: 68px;
             background-color: transparent;
-            min-height: 50px;
+            top: 103px;
+            left: 449px;
         }
     
