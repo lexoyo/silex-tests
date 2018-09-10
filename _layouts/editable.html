@@ -54,7 +54,13 @@ title:
        {% endif %}
     {% endunless %}
 {% endfor %}
-</div></div><div data-silex-type="text" class="editable-style silex-id-1536573804757-2 text-element" data-silex-id="silex-id-1536573804757-2" style=""><div class="silex-element-content normal"><p>New text box</p></div></div></div>
+</div></div><div data-silex-type="text" class="editable-style silex-id-1536573804757-2 text-element" data-silex-id="silex-id-1536573804757-2" style=""><div class="silex-element-content normal">{% for page in site.pages %}
+    {% unless page.exclude %}
+       {% if page.title %}
+         &lt;a class="page-link" href="{{ page.url | prepend: site.baseurl }}"&gt;{{ page.title }}&lt;/a&gt;
+       {% endif %}
+    {% endunless %}
+{% endfor %}</div></div></div>
     </div>
     <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1478366450713-3 section-element" data-silex-id="silex-id-1478366450713-3" style="">
         <div data-silex-type="container" class="editable-style silex-element-content silex-id-1478366450713-2 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1478366450713-2">
