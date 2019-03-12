@@ -144,8 +144,8 @@ $(function() {
       }
       else {
         var delta = {
-          top: $('html, body').scrollTop() / ratio,
-          left: $('html, body').scrollLeft() / ratio,
+          top: ($('html').scrollTop() || $('body').scrollTop()) / ratio,
+          left: ($('html').scrollLeft() || $('body').scrollLeft()) / ratio,
         };
         $fixedPositions.each(function($obj) {
           var obj = $(this).get(0);
