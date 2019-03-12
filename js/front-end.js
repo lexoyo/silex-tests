@@ -159,8 +159,7 @@ $(function() {
         };
         $fixedPositions.each(function($obj) {
           var obj = $(this).get(0);
-          obj.$el.css({
-            'position': 'absolute',
+          obj.$el.offset({
             'top': obj.offsetTop + delta.top + 'px',
             'left': obj.offsetLeft + delta.left + 'px'
           });
