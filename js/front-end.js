@@ -62,6 +62,14 @@ $(function() {
       });
     }
 
+    function getScroll() {
+      var container = $(document.scrollingElement || "html");
+      return {
+        left: container.scrollLeft(),
+        top: container.scrollTop(),
+      }
+    }
+
     function onResize() {
       $body.css({
         'transform': '',
@@ -143,9 +151,10 @@ $(function() {
         });
       }
       else {
+        var scroll = getScroll();
         var delta = {
-          top: ($('html').scrollTop() || $('body').scrollTop()) / ratio,
-          left: ($('html').scrollLeft() || $('body').scrollLeft()) / ratio,
+          top: scroll.top / ratio,
+          left: scroll.left / ratio,
         };
         $fixedPositions.each(function($obj) {
           var obj = $(this).get(0);
