@@ -17,7 +17,6 @@ $(function() {
   var $win = $(window);
   var $doc = $(document);
   var $body = $('body');
-  var $html = $('html');
   var $preventScale = $('.prevent-scale');
   var $fixed = $('.fixed');
   var siteWidth = parseInt($('meta[name=website-width]').attr('content')) || null;
@@ -145,8 +144,8 @@ $(function() {
       }
       else {
         var delta = {
-          top: $html.scrollTop() / ratio,
-          left: $html.scrollLeft() / ratio,
+          top: $('html, body').scrollTop() / ratio,
+          left: $('html, body').scrollLeft() / ratio,
         };
         $fixedPositions.each(function($obj) {
           var obj = $(this).get(0);
