@@ -51,12 +51,10 @@ $(function() {
       $body.on('pageChanged', onResize);
     }
     function initFixedPositions() {
-      console.log('getFixedPositions');
       $fixedPositions = $fixed.map(function(el) {
         var offset = $(this).offset();
         offset.top = $(this).attr('silex-fixed-style-top') || offset.top;
         offset.left = $(this).attr('silex-fixed-style-left') || offset.left;
-        console.log(this, offset);
         return {
           offsetTop: offset.top,
           offsetLeft: offset.left,
@@ -86,8 +84,6 @@ $(function() {
     }
 
     function resizeBody() {
-      console.log('resizeBody');
-
       // if the site has a defined width and the window is smaller than this width, then
       // scale the website to fit the window
       // This happens also on mobile
@@ -135,11 +131,9 @@ $(function() {
     }
 
     function onScroll() {
-      console.log('onScroll', $fixedPositions);
       var ratio = getScaleRatio();
       if(ratio === 1) {
         // in this case, there is no transformation and we use the native fixed position
-        console.log('no scale => use css position: fixed')
         $fixedPositions.each(function($obj) {
           var obj = $(this).get(0);
           obj.$el.css({
@@ -196,7 +190,6 @@ $(function() {
        * called when a page is opened
        */
       $body.on('pageChanged', function (event, pageName) {
-        console.log('pageChanged')
         // mark links to the current page as active
         $('[data-silex-href*="#!'+pageName+'"]').addClass('page-link-active');
         $('[id*="'+pageName+'"]').addClass('page-link-active');
