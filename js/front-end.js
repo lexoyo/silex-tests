@@ -62,11 +62,12 @@ $(function() {
       });
     }
 
+    // cross browser get scroll (even IE)
     function getScroll() {
-      var container = $(document.scrollingElement || "html");
+      var container = $(document.scrollingElement || 'html');
       return {
         left: container.scrollLeft(),
-        top: container.scrollTop(),
+        top: container.scrollTop()
       }
     }
 
@@ -75,14 +76,14 @@ $(function() {
         'transform': '',
         'transform-origin': '',
         'min-width': '',
-        'height': '',
+        'height': ''
       });
       $fixedPositions.each(function($obj) {
         var obj = $(this).get(0);
         obj.$el.css({
           'position': '',
           'top': '',
-          'left': '',
+          'left': ''
         });
       });
       initFixedPositions();
@@ -108,12 +109,12 @@ $(function() {
           'transform': '',
           'transform-origin': '',
           'min-width': '',
-          'height': '',
+          'height': ''
         });
         // unscale some elements
         $preventScale.css({
           'transform': '',
-          'transform-origin': '',
+          'transform-origin': ''
         })
         // add space around the elements in the body
         // I removed this because it bugs when there are elements with 100% width
@@ -127,12 +128,12 @@ $(function() {
           'transform': 'scale(' + ratio + ')',
           'transform-origin': '0 0',
           'min-width': getScaleBreakPoint() + 'px',
-          'height': $body.height() * ratio,
+          'height': $body.height() * ratio
         });
         // unscale some elements
         $preventScale.css({
           'transform': 'scale(' + (1/ratio) + ')',
-          'transform-origin': '0 0',
+          'transform-origin': '0 0'
         })
         }
     }
@@ -145,8 +146,8 @@ $(function() {
           var obj = $(this).get(0);
           obj.$el.css({
             'position': 'fixed',
-            'top': `${ obj.offsetTop }px`,
-            'left': `${ obj.offsetLeft }px`,
+            'top': obj.offsetTop + 'px',
+            'left': obj.offsetLeft + 'px'
           });
         });
       }
@@ -160,8 +161,8 @@ $(function() {
           var obj = $(this).get(0);
           obj.$el.css({
             'position': 'fixed',
-            'top': `${ obj.offsetTop + delta.top }px`,
-            'left': `${ obj.offsetLeft + delta.left }px`,
+            'top': obj.offsetTop + delta.top + 'px',
+            'left': obj.offsetLeft + delta.left + 'px'
           });
         });
       }
