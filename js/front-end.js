@@ -17,8 +17,6 @@ $(function() {
   var $win = $(window);
   var $doc = $(document);
   var $body = $('body');
-  var $preventScale = $('.prevent-scale');
-  var $fixed = $('.fixed');
   var siteWidth = parseInt($('meta[name=website-width]').attr('content')) || null;
 
   // expose data to components
@@ -75,9 +73,8 @@ $(function() {
           'min-width': '',
           'height': ''
         });
-
         // unscale some elements
-        $preventScale.css({
+        $('.prevent-scale').css({
           'transform': '',
           'transform-origin': ''
         })
@@ -91,7 +88,7 @@ $(function() {
           'height': $body.height() * ratio
         });
         // unscale some elements
-        $preventScale.css({
+        $('.prevent-scale').css({
           'transform': 'scale(' + (1/ratio) + ')',
           'transform-origin': '0 0'
         })
@@ -104,11 +101,14 @@ $(function() {
       var scroll = getScroll();
       var offsetTop = scroll.top / ratio;
       var offsetLeft = scroll.left / ratio;
-      $fixed.css({
+      $('.fixed').css({
         'position': '',
-        'top': '',
-        'left': '',
         'transform': 'translate(' + offsetLeft + 'px, ' + offsetTop + 'px)',
+        'transform-origin': '0 0'
+      });
+      $('.fixed.prevent-scale').css({
+        'position': '',
+        'transform': 'translate(' + offsetLeft + 'px, ' + offsetTop + 'px) scale(' + (1/ratio) + ')',
         'transform-origin': '0 0'
       });
     }
