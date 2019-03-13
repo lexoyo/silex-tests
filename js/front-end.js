@@ -150,6 +150,7 @@ $(function() {
         });
       }
       else {
+        // simulate the fixed position
         var scroll = getScroll();
         resetBody();
         $fixedPositions.each(function($obj) {
