@@ -33,11 +33,12 @@ $(function() {
   window.silex.resizeRatio = 1;
 
   // FIXME: why is it needed?
-  window.silex.resizeBody = resizeBody;
+  window.silex.resizeBody = function() {};
 
   // this script is only for outside the editor
   if($body.hasClass('silex-runtime')) {
-
+    setTimeout(() => {
+    }, 1000)
     if(!$body.hasClass('silex-published')) {
       initPages();
     }
@@ -50,6 +51,12 @@ $(function() {
       $body.on('pageChanged', onResize);
     }
     function initFixedPositions() {
+
+      $fixedPositions.css({
+        'position': 'absolute',
+        'top': '',
+        'left': ''
+      });
       $fixedPositions = $fixed.map(function(el) {
         var offset = $(this).offset();
         offset.top = $(this).attr('silex-fixed-style-top') || offset.top;
@@ -72,23 +79,18 @@ $(function() {
     }
 
     function onResize() {
+      initFixedPositions();
+      onScroll();
+      resizeBody();
+    }
+
+    function resetBody() {
       $body.css({
         'transform': '',
         'transform-origin': '',
         'min-width': '',
         'height': ''
       });
-      $fixedPositions.each(function($obj) {
-        var obj = $(this).get(0);
-        obj.$el.css({
-          'position': '',
-          'top': '',
-          'left': ''
-        });
-      });
-      initFixedPositions();
-      onScroll();
-      resizeBody();
     }
 
     function resizeBody() {
@@ -105,12 +107,8 @@ $(function() {
       window.silex.resizeRatio = ratio;
       if(ratio === 1) {
         // reset scale
-        $body.css({
-          'transform': '',
-          'transform-origin': '',
-          'min-width': '',
-          'height': ''
-        });
+        resetBody();
+
         // unscale some elements
         $preventScale.css({
           'transform': '',
@@ -135,7 +133,7 @@ $(function() {
           'transform': 'scale(' + (1/ratio) + ')',
           'transform-origin': '0 0'
         })
-        }
+      }
     }
 
     function onScroll() {
@@ -153,17 +151,15 @@ $(function() {
       }
       else {
         var scroll = getScroll();
-        var delta = {
-          top: scroll.top / ratio,
-          left: scroll.left / ratio,
-        };
+        resetBody();
         $fixedPositions.each(function($obj) {
           var obj = $(this).get(0);
           obj.$el.offset({
-            'top': obj.offsetTop + delta.top + 'px',
-            'left': obj.offsetLeft + delta.left + 'px'
+            'top': obj.offsetTop + (scroll.top / ratio),
+            'left': obj.offsetLeft + (scroll.left / ratio)
           });
         });
+        resizeBody();
       }
     }
 
