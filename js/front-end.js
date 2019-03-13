@@ -20,12 +20,6 @@ $(function() {
   var $preventScale = $('.prevent-scale');
   var $fixed = $('.fixed');
   var siteWidth = parseInt($('meta[name=website-width]').attr('content')) || null;
-  var $fixedPositions = $([]);
-
-  // flags
-  // var blockedFlag = false;
-  // var resizeNeededFlag = false;
-  // var iAmScaling = false;
 
   // expose data to components
   window.silex = window.silex || {};
@@ -37,39 +31,22 @@ $(function() {
 
   // this script is only for outside the editor
   if($body.hasClass('silex-runtime')) {
-    setTimeout(() => {
-    }, 1000)
     if(!$body.hasClass('silex-published')) {
       initPages();
     }
-    initFixedPositions();
     onScroll();
-    resizeBody();
+    onResize();
     $win.resize(onResize);
     $win.scroll(onScroll);
-    if(!$body.hasClass('silex-published')) {
-      $body.on('pageChanged', onResize);
-    }
-    function initFixedPositions() {
-
-      $fixedPositions.css({
-        'position': 'absolute',
-        'top': '',
-        'left': ''
-      });
-      $fixedPositions = $fixed.map(function(el) {
-        var offset = $(this).offset();
-        offset.top = $(this).attr('silex-fixed-style-top') || offset.top;
-        offset.left = $(this).attr('silex-fixed-style-left') || offset.left;
-        return {
-          offsetTop: offset.top,
-          offsetLeft: offset.left,
-          $el: $(this)
-        };
-      });
-    }
-
+    // if(!$body.hasClass('silex-published')) {
+    //   $body.on('pageChanged', function() {
+    //     initFixedPositions();
+    //     onScroll();
+    //     onResize();
+    //   });
+    // }
     // cross browser get scroll (even IE)
+
     function getScroll() {
       var container = $(document.scrollingElement || 'html');
       return {
@@ -79,21 +56,6 @@ $(function() {
     }
 
     function onResize() {
-      initFixedPositions();
-      onScroll();
-      resizeBody();
-    }
-
-    function resetBody() {
-      $body.css({
-        'transform': '',
-        'transform-origin': '',
-        'min-width': '',
-        'height': ''
-      });
-    }
-
-    function resizeBody() {
       // if the site has a defined width and the window is smaller than this width, then
       // scale the website to fit the window
       // This happens also on mobile
@@ -107,18 +69,18 @@ $(function() {
       window.silex.resizeRatio = ratio;
       if(ratio === 1) {
         // reset scale
-        resetBody();
+        $body.css({
+          'transform': '',
+          'transform-origin': '',
+          'min-width': '',
+          'height': ''
+        });
 
         // unscale some elements
         $preventScale.css({
           'transform': '',
           'transform-origin': ''
         })
-        // add space around the elements in the body
-        // I removed this because it bugs when there are elements with 100% width
-        //width += 50;
-        //height += 50;
-        // check if a redraw is needed
       }
       else {
         // scale the body
@@ -137,31 +99,18 @@ $(function() {
     }
 
     function onScroll() {
+      // simulate the fixed position
       var ratio = getScaleRatio();
-      if(ratio === 1) {
-        // in this case, there is no transformation and we use the native fixed position
-        $fixedPositions.each(function($obj) {
-          var obj = $(this).get(0);
-          obj.$el.css({
-            'position': 'fixed',
-            'top': obj.offsetTop + 'px',
-            'left': obj.offsetLeft + 'px'
-          });
-        });
-      }
-      else {
-        // simulate the fixed position
-        var scroll = getScroll();
-        resetBody();
-        $fixedPositions.each(function($obj) {
-          var obj = $(this).get(0);
-          obj.$el.offset({
-            'top': obj.offsetTop + (scroll.top / ratio),
-            'left': obj.offsetLeft + (scroll.left / ratio)
-          });
-        });
-        resizeBody();
-      }
+      var scroll = getScroll();
+      var offsetTop = scroll.top / ratio;
+      var offsetLeft = scroll.left / ratio;
+      $fixed.css({
+        'position': '',
+        'top': '',
+        'left': '',
+        'transform': 'translate(' + offsetLeft + 'px, ' + offsetTop + 'px)',
+        'transform-origin': '0 0'
+      });
     }
 
     // utility functions
