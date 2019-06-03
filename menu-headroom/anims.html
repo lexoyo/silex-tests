@@ -47,6 +47,17 @@ h6 {font-weight: 300; line-height: 150%;}i.fa {color: #333;}*,
 var $animation_elements = $('.animation-element');
 var $window = $(window);
 
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
 function check_if_in_view() {
   var window_height = $window.height();
   var window_top_position = $window.scrollTop();
@@ -54,13 +65,9 @@ function check_if_in_view() {
  
   $.each($animation_elements, function() {
     var $element = $(this);
-    var element_height = $element.outerHeight();
-    var element_top_position = $element.offset().top;
-    var element_bottom_position = (element_top_position + element_height);
- 
+
     //check to see if this current container is within viewport
-    if ((element_bottom_position >= window_top_position) &&
-        (element_top_position <= window_bottom_position)) {
+    if ((isScrolledIntoView(this))) {
       $element.addClass('in-view');
     } else {
       $element.removeClass('in-view');
