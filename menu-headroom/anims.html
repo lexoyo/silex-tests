@@ -65,6 +65,7 @@ function check_if_in_view() {
  
   $.each($animation_elements, function() {
     var $element = $(this);
+    console.log('xxx', this, window_top_position, $(this).offset().top)
 
     //check to see if this current container is within viewport
     if ((isScrolledIntoView(this))) {
