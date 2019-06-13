@@ -178,14 +178,23 @@ body.enable-mobile .background {
 .silex-element-content-full-height .silex-element-content {
   height: 100%;
 }
+.prodotype-preview {
+  display: none;
+}
 .prodotype-runtime {
   display: none;
+}
+.prodotype-published {
+  display: none;
+}
+body.silex-editor .prodotype-preview {
+  display: block;
 }
 body.silex-runtime .prodotype-runtime {
   display: block;
 }
-body.silex-runtime .prodotype-preview {
-  display: none;
+body.silex-published .prodotype-published {
+  display: block;
 }
 .prodotype-force-size {
   position: absolute;
