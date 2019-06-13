@@ -181,7 +181,8 @@ body.enable-mobile .background {
 .prodotype-preview {
   display: none;
 }
-.prodotype-runtime {
+.prodotype-runtime,
+.prodotype-runtime-strict {
   display: none;
 }
 .prodotype-published {
@@ -190,11 +191,15 @@ body.enable-mobile .background {
 body.silex-editor .prodotype-preview {
   display: block;
 }
-body.silex-runtime .prodotype-runtime {
+body.silex-runtime .prodotype-runtime,
+body.silex-runtime .prodotype-runtime-strict {
   display: block;
 }
 body.silex-published .prodotype-published {
   display: block;
+}
+body.silex-publish .prodotype-runtime-strict {
+  display: none;
 }
 .prodotype-force-size {
   position: absolute;
