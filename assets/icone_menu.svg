@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="40" viewBox="0 0 60 40">
+  <g id="icn-navigation" transform="translate(-1120 -744)">
+    <g id="icn-navigation-2" data-name="icn-navigation" transform="translate(1120 744)">
+      <rect id="bar" width="60" height="8" rx="4" fill="#f2f2f2"/>
+      <path id="bar-2" data-name="bar" d="M4,0H56a4,4,0,0,1,0,8H4A4,4,0,0,1,4,0Z" transform="translate(0 16)" fill="#3f6e74"/>
+      <path id="bar-3" data-name="bar" d="M4,0H56a4,4,0,0,1,0,8H4A4,4,0,0,1,4,0Z" transform="translate(0 32)" fill="#245560"/>
+    </g>
+  </g>
+</svg>
