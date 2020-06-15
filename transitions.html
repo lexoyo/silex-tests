@@ -1,0 +1,486 @@
+<!DOCTYPE html><html lang=""><head><script type="text/javascript" class="silex-json-styles" data-silex-static="">
+    window.silex = window.silex || {}
+    window.silex.data = {"site":{"title":"Food and drink template","description":"The description displayed in search results","enableMobile":true,"websiteUrl":null,"faviconPath":null,"thumbnailSocialPath":"http://localhost:6805/api/1.0/www/exec/get//tmp/food-and-drink/assets/lunch.jpg","descriptionSocial":"The description displayed in social networks","titleSocial":"Check this site, friends!","lang":"","width":960,"headUser":"","headStyle":"h1 {\n  text-shadow: 0 0 5px #fefffd, 0 0 5px #fefffd, 0 0 5px #fefffd, 0 0 5px #fefffd, 0 0 10px #fefffd, 0 0 10px #fefffd, 0 0 10px #fefffd;\n}\n\n.nav a {\n  padding: 20px;\n}","headScript":"","hostingProvider":"unifile","twitterSocial":"@silexlabs","dataSources":{},"fonts":[{"family":"'Lobster', Georgia, Times, serif","href":"https://fonts.googleapis.com/css?family=Lobster"},{"family":"'Cabin', Helvetica, Arial, sans-serif","href":"https://fonts.googleapis.com/css?family=Cabin"}],"styles":{"all-style":{"className":"all-style","templateName":"text","displayName":"All Style","styles":{"desktop":{"normal":{"className":"all-style","pseudoClass":"normal","Link":{"font-family":"","text-decoration":"none","color":"#000000"},"All":{"font-family":"'Cabin', Helvetica, Arial, sans-serif"},"Heading1":{"font-family":"'Lobster', Georgia, Times, serif","font-size":"80px","text-align":"center"},"Heading2":{"font-family":"'Lobster', Georgia, Times, serif","text-align":"center"},"Heading3":{"font-family":"'Lobster', Georgia, Times, serif","text-align":"center"},"Paragraph":{"line-height":"25px"},"Active":{"color":"","background-color":""}}},"mobile":{"normal":{"templateName":"text","className":"all-style","pseudoClass":"normal","All":{"font-size":"25px","line-height":""},"Paragraph":{"letter-spacing":"3px","line-height":"30px"}}}}},"nav":{"className":"nav","templateName":"text","displayName":"nav","styles":{"desktop":{"normal":{"className":"nav","pseudoClass":"normal","All":{"text-align":"center","font-size":"14px","font-weight":"bold","line-height":"27px","letter-spacing":"2px"},"Link":{"text-decoration":"none","line-height":"30px"},"Active":{"color":"#fefffd","background-color":"#3D362D"}}},"mobile":{"normal":{"templateName":"text","className":"nav","pseudoClass":"normal","UnorderedList":{"list-style-type":"none","font-size":"2em","line-height":"2"},"Link":{"line-height":"80px"}}}}},"header":{"className":"header","templateName":"text","displayName":"header","styles":{"desktop":{"normal":{"className":"header","pseudoClass":"normal","All":{"line-height":"2"}}}}},"footer":{"className":"footer","templateName":"text","displayName":"footer","styles":{"desktop":{"normal":{"className":"footer","pseudoClass":"normal","All":{"color":"","text-align":"center"},"Link":{"color":"#000000"}}}}},"caption":{"className":"caption","templateName":"text","displayName":"caption","styles":{"desktop":{"normal":{"className":"caption","pseudoClass":"normal","All":{"color":"","text-align":"center"},"Link":{"color":"#000000"}}}}}},"isTemplate":false,"file":null,"prodotypeDependencies":{}},"pages":[{"id":"home","displayName":"Home","link":{"type":"LinkTypePage","value":"#!page-home"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true},{"id":"menu","displayName":"Menu","link":{"type":"LinkTypePage","value":"#!page-menu"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true},{"id":"team","displayName":"Team","link":{"type":"LinkTypePage","value":"#!page-team"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true},{"id":"info","displayName":"Info","link":{"type":"LinkTypePage","value":"#!page-info"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true}]}</script>
+    <meta charset="UTF-8">
+    <meta name="generator" content="Silex v2.2.11">
+    <!-- leave this for stats -->
+    <script type="text/javascript" src="https://preprod.silex.me/static/2.11/jquery.js" data-silex-static=""></script>
+    <script type="text/javascript" src="https://preprod.silex.me/static/2.11/jquery-ui.js" data-silex-static=""></script>
+    <script type="text/javascript" src="https://preprod.silex.me/static/2.11/pageable.js" data-silex-static=""></script>
+    <script type="text/javascript" src="https://preprod.silex.me/static/2.11/front-end.js" data-silex-static=""></script>
+    <!-- Normalize -->
+    <link href="https://preprod.silex.me/static/2.11/normalize.css" rel="stylesheet" data-silex-static="">
+    <!-- Silex style -->
+    <link href="https://preprod.silex.me/static/2.11/front-end.css" rel="stylesheet" data-silex-static="">
+
+    <style type="text/css" class="silex-style">h1 {text-shadow: 0 0 5px #fefffd, 0 0 5px #fefffd, 0 0 5px #fefffd, 0 0 5px #fefffd, 0 0 10px #fefffd, 0 0 10px #fefffd, 0 0 10px #fefffd;}.nav a {padding: 20px;}</style>
+    <script type="text/javascript" class="silex-script"></script>
+    <style class="silex-inline-styles" type="text/css">.body-initial {background-color: rgb(159, 141, 103); background-image: url(../../../../../libs/templates/silex-templates/food-and-drink/assets/wood.jpg); background-position-x: 50%; background-position-y: 50%; background-size: cover; top: ;left:; position: static;}.silex-id-1552774272342-11 {position: static; margin-top: -1px;}.silex-id-1552774272339-10 {background-color: ;min-height: 100px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1484949224320-1 {background-color: transparent; position: static; margin-top: -1px;}.silex-id-1484949224320-0 {background-color: transparent; min-height: 235px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1552774225668-8 {width: 33px; background-color: transparent; top: 100px; left: 686px; min-height: 27px; position: absolute;}.silex-id-1552774237438-9 {width: 100px; background-color: rgb(255, 255, 255); top: 100px; left: 653px; min-height: 100px; position: absolute;}.silex-id-1424647173853 {background-color: transparent; border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); left: 150px; top: -37px; width: 700px; min-height: 110px; position: absolute;}.silex-id-1424647165395 {border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); left: 292px; top: 119px; width: 389px; height: 47px; position: absolute;}.silex-id-1424710230648 {background-color: rgb(254, 255, 253); border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); left: 0px; top: 174px; width: 960px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; min-height: 30px; position: absolute;}.silex-id-1424710433398 {background-color: rgb(255, 255, 255); left: 239px; top: 0px; width: 121px; min-height: 30px; position: absolute;}.silex-id-1424710332527 {left: 8px; top: 0px; width: 106px; min-height: 30px; position: absolute;}.silex-id-1426536866650 {background-color: transparent; left: 365px; top: 0px; width: 121px; min-height: 30px; position: absolute;}.silex-id-1434425184890-0 {left: 8px; top: 0px; width: 106px; min-height: 30px; position: absolute;}.silex-id-1434634286306-0 {background-color: transparent; left: 492px; top: 0px; width: 121px; min-height: 30px; position: absolute;}.silex-id-1434634286307-1 {left: 8px; top: 0px; width: 106px; min-height: 30px; position: absolute;}.silex-id-1434634331833-2 {background-color: transparent; left: 619px; top: 0px; width: 121px; min-height: 30px; position: absolute;}.silex-id-1434634331834-3 {left: 8px; top: 0px; width: 106px; min-height: 30px; position: absolute;}.silex-id-1484949486466-5 {background-color: transparent; position: static; margin-top: -1px;}.silex-id-1484949486465-4 {background-color: transparent; min-height: 764px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1424920356950 {background-color: rgb(254, 255, 253); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; left: 644px; top: 33px; width: 295px; border-top-color: rgb(254, 255, 253); border-right-color: rgb(254, 255, 253); border-bottom-color: rgb(254, 255, 253); border-left-color: rgb(254, 255, 253); min-height: 477px; position: absolute;}.silex-id-1425063529504 {background-color: rgb(254, 255, 253); background-image: url(../../../../../libs/templates/silex-templates/food-and-drink/assets/cafe2.jpg); background-size: cover; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; left: 323px; top: 33px; width: 295px; border-top-color: rgb(254, 255, 253); border-right-color: rgb(254, 255, 253); border-bottom-color: rgb(254, 255, 253); border-left-color: rgb(254, 255, 253); min-height: 225px; position: absolute;}.silex-id-1424921460631 {left: 0px; top: 539px; width: 188px; background-color: rgb(254, 255, 253); border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(254, 255, 253); border-right-color: rgb(254, 255, 253); border-bottom-color: rgb(254, 255, 253); border-left-color: rgb(254, 255, 253); min-height: 190px; position: absolute;}.silex-id-1434426151026-1 {width: 740px; top: 539px; left: 198px; background-color: rgb(254, 255, 253); border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(254, 255, 253); border-right-color: rgb(254, 255, 253); border-bottom-color: rgb(254, 255, 253); border-left-color: rgb(254, 255, 253); min-height: 190px; position: absolute;}.silex-id-1425063611139 {background-color: rgb(254, 255, 253); background-image: url(../../../../../libs/templates/silex-templates/food-and-drink/assets/cafe.jpg); background-size: cover; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; left: 322px; top: 285px; width: 295px; border-top-color: rgb(254, 255, 253); border-right-color: rgb(254, 255, 253); border-bottom-color: rgb(254, 255, 253); border-left-color: rgb(254, 255, 253); min-height: 225px; position: absolute;}.silex-id-1425063401661 {background-color: rgb(254, 255, 253); background-image: url(../../../../../libs/templates/silex-templates/food-and-drink/assets/people.jpeg); background-size: cover; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; left: 0px; top: 33px; width: 295px; border-top-color: rgb(254, 255, 253); border-right-color: rgb(254, 255, 253); border-bottom-color: rgb(254, 255, 253); border-left-color: rgb(254, 255, 253); background-position-x: 50%; background-position-y: 50%; min-height: 477px; position: absolute;}.silex-id-1484949640479-7 {background-color: transparent; position: static; margin-top: -1px;}.silex-id-1484949640479-6 {background-color: transparent; min-height: 777px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1434426485636-2 {left: 1px; top: 23px; width: 188px; background-color: rgb(254, 255, 253); border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(254, 255, 253); border-right-color: rgb(254, 255, 253); border-bottom-color: rgb(254, 255, 253); border-left-color: rgb(254, 255, 253); min-height: 201px; position: absolute;}.silex-id-1434426485665-3 {width: 740px; top: 23px; left: 199px; background-color: rgb(254, 255, 253); border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(254, 255, 253); border-right-color: rgb(254, 255, 253); border-bottom-color: rgb(254, 255, 253); border-left-color: rgb(254, 255, 253); min-height: 190px; position: absolute;}.silex-id-1434426787582-9 {width: 937px; top: 259px; left: 1px; background-color: rgb(254, 255, 253); border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; background-image: url(../../../../../libs/templates/silex-templates/food-and-drink/assets/people.jpeg); background-size: cover; border-top-color: rgb(254, 255, 253); border-right-color: rgb(254, 255, 253); border-bottom-color: rgb(254, 255, 253); border-left-color: rgb(254, 255, 253); background-position-x: 50%; background-position-y: 50%; min-height: 244px; position: absolute;}.silex-id-1434426613625-5 {left: 751px; top: 541px; width: 188px; background-color: rgb(254, 255, 253); border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(254, 255, 253); border-right-color: rgb(254, 255, 253); border-bottom-color: rgb(254, 255, 253); border-left-color: rgb(254, 255, 253); min-height: 190px; position: absolute;}.silex-id-1434426613658-6 {width: 740px; top: 541px; left: 2px; background-color: rgb(254, 255, 253); border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(254, 255, 253); border-right-color: rgb(254, 255, 253); border-bottom-color: rgb(254, 255, 253); border-left-color: rgb(254, 255, 253); min-height: 190px; position: absolute;}.silex-id-1538167171167-15 {min-width: 960px; position: static; margin-top: -1px;}.silex-id-1538167171162-14 {background-color: ;min-height: 302px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1538166900880-13 {width: 959px; top: 20px; background-color: rgb(254, 255, 253); left: 0px; min-height: 261px; position: absolute;}.silex-id-1538167211265-17 {position: static; margin-top: -1px;}.silex-id-1538167211260-16 {background-color: ;min-height: 293px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1471343044963-3 {width: 959px; top: 12px; left: 0px; background-color: rgb(254, 255, 253); min-height: 261px; position: absolute;}.silex-id-1484949434473-3 {background-color: transparent; min-width: 960px; position: static; margin-top: -1px;}.silex-id-1484949434473-2 {background-color: rgba(255,255,255,1); min-height: 33px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1425063986632 {left: 50px; top: -12px; width: 841px; border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); background-color: transparent; min-height: 35px; position: absolute;}@media only screen and (max-width: 480px) {.silex-id-1552774272342-11 {top: 0px; left: 0px;}.silex-id-1552774272339-10 {min-height: 41px;}.silex-id-1552774225668-8 {left: -12px; top: 2572px;}.silex-id-1552774237438-9 {left: 121px; top: 2px; width: 295px; background-color: transparent; min-height: 23px;}.silex-id-1424920356950 {width: 450px; min-height: 338px;}.silex-id-1425063529504 {width: 450px; background-image: url(../../../../../libs/templates/silex-templates/food-and-drink/assets/cafe2.jpg);}.silex-id-1424921460631 {width: 450px; min-height: 100px;}.silex-id-1434426151026-1 {width: 450px;}.silex-id-1425063611139 {width: 450px; background-image: url(../../../../../libs/templates/silex-templates/food-and-drink/assets/cafe.jpg);}.silex-id-1484949640479-7 {top: 422px; left: 0px;}.silex-id-1484949640479-6 {top: 0px; left: 12px; width: 445px; min-height: 2103px;}.silex-id-1434426485636-2 {width: 423px; top: 0px; left: 1px; min-height: 170px;}.silex-id-1434426485665-3 {width: 423px; top: 190px; left: 1px; min-height: 728px;}.silex-id-1434426787582-9 {top: 908px; left: 1px; width: 423px; min-height: 244px;}.silex-id-1434426613625-5 {width: 423px; top: 1172px; left: 1px; min-height: 211px;}.silex-id-1434426613658-6 {top: 1403px; left: 1px; width: 423px; min-height: 680px;}.silex-id-1538167171167-15 {top: 422px; left: 0px;}.silex-id-1538167171162-14 {top: 0px; left: 12px; width: 455px; min-height: 753px;}.silex-id-1538166900880-13 {top: 28px; left: 1px; width: 423px; min-height: 270px;}.silex-id-1538167211265-17 {top: 422px; left: 0px;}.silex-id-1538167211260-16 {top: 0px; left: 12px; width: 444px; min-height: 799px;}.silex-id-1471343044963-3 {top: 28px; left: 1px; width: 423px; min-height: 270px;}.silex-id-1484949434473-3 {top: 2555px; left: 0px;}.silex-id-1484949434473-2 {top: 0px; left: 12px; width: 445px; min-height: 170px;}.silex-id-1425063986632 {top: 0px; left: 11px; width: 424px; min-height: 170px;}}</style>
+
+
+
+
+
+
+
+
+
+
+    <title>Food and drink template</title>
+    <meta name="description" content="The description displayed in search results">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Check this site, friends!">
+    <meta name="og:title" content="Check this site, friends!">
+    <meta name="twitter:description" content="The description displayed in social networks">
+    <meta name="og:description" content="The description displayed in social networks">
+    <meta name="twitter:image" content="http://localhost:6805/api/1.0/www/exec/get//tmp/food-and-drink/assets/lunch.jpg">
+    <meta name="og:image" content="http://localhost:6805/api/1.0/www/exec/get//tmp/food-and-drink/assets/lunch.jpg">
+    <meta name="twitter:site" content="@silexlabs">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" class="silex-custom-font"><style class="silex-prodotype-style" type="text/css" data-style-id="all-style">h1 {font-family: 'Lobster', Georgia, Times, serif; font-size: 80px; text-align: center;}h2 {font-family: 'Lobster', Georgia, Times, serif; text-align: center;}h3 {font-family: 'Lobster', Georgia, Times, serif; text-align: center;}.text-element > .silex-element-content {font-family: 'Cabin', Helvetica, Arial, sans-serif;}p {line-height: 25px;}a {color: #000000; text-decoration: none;}[data-silex-href] {color: #000000; text-decoration: none;}@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {.text-element > .silex-element-content {font-size: 25px;}p {line-height: 30px; letter-spacing: 3px;}}</style><link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" class="silex-custom-font"><style class="silex-prodotype-style" type="text/css" data-style-id="nav">.nav.text-element > .silex-element-content {font-weight: bold; font-size: 14px; text-align: center; line-height: 27px; letter-spacing: 2px;}.nav a {text-decoration: none; line-height: 30px;}.nav [data-silex-href] {text-decoration: none; line-height: 30px;}.nav .page-link-active {color: #fefffd; background-color: #3D362D;}@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {.nav a {line-height: 80px;}.nav [data-silex-href] {line-height: 80px;}.nav ul li {list-style-type: none; font-size: 2em; line-height: 2;}}</style><style class="silex-prodotype-style" type="text/css" data-style-id="footer">.footer.text-element > .silex-element-content {text-align: center;}.footer a {color: #000000;}.footer [data-silex-href] {color: #000000;}</style><style class="silex-prodotype-style" type="text/css" data-style-id="caption">.caption.text-element > .silex-element-content {text-align: center;}.caption a {color: #000000;}.caption [data-silex-href] {color: #000000;}</style><meta name="viewport" content="width=device-width, initial-scale=1"><style type="text/css" class="silex-style-settings">.hamburger-menu_1563834242930_806 {position: absolute; z-index: 20;}.silex-editor .hamburger-menu_1563834242930_806 nav {left: -9999px;}.hamburger-menu_1563834242930_806 nav ul {margin-top: 80px;}.hamburger-menu_1563834242930_806 nav {opacity: 0; position: absolute; background-color: #ededed; transition: left 1s ease, height 0s ease 1s; left: -300px; width: 300px; height: 20px;}.hamburger-menu_1563834242930_806.open nav {opacity: 1; height: 100vh; left: 0; transition: left 1s ease, height 0s ease 0s;}.hamburger-menu_1563834242930_806 .nav-container {z-index: 10; position: absolute;}.hamburger-menu_1563834242930_806.open .nav-container {}.hamburger-menu_1563834242930_806 .hamburger-btn {z-index: 20; cursor: pointer; position: absolute;}.hamburger-menu_1563834242930_806 .hamburger-btn span {display: block; width: 30px; height: 5px; margin-bottom: 3px; position: relative; background-color: #000000; border: 1px solid #ffffff; border-radius: 3px; transition: border-color 0.1s ease-in,
+      opacity 0.1s ease-in,
+      transform 0.1s ease-in,
+      background 0.1s ease-in;}.hamburger-menu_1563834242930_806.open .hamburger-btn span {border-color: rgba(255, 255, 255, 0);}.hamburger-menu_1563834242930_806 .hamburger-btn span:first-child {transform-origin: 4px -2px;}.hamburger-menu_1563834242930_806.open .hamburger-btn span:first-child {transform: rotate(45deg) translate(7px, -4px);}.hamburger-menu_1563834242930_806.open .hamburger-btn span:nth-last-child(2) {opacity: 0;}.hamburger-menu_1563834242930_806 .hamburger-btn span:nth-child(3) {transform-origin: -11px 4px;}.hamburger-menu_1563834242930_806.open .hamburger-btn span:nth-child(3) {transform: rotate(-45deg) translate(0, 12px);}</style></head>
+
+<body data-silex-id="body-initial" class="body-initial all-style enable-mobile prevent-resizable prevent-selectable editable-style silex-runtime" data-silex-type="container-element" style=""><div data-silex-type="container-element" class="container-element editable-style silex-id-1552774272342-11 section-element hide-on-desktop prevent-resizable" data-silex-id="silex-id-1552774272342-11"><div data-silex-type="container-element" class="editable-style silex-id-1552774272339-10 container-element silex-element-content website-width" data-silex-id="silex-id-1552774272339-10"></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div data-silex-type="container-element" class="container-element website-min-width editable-style silex-id-1484949224320-1 section-element prevent-resizable" data-silex-id="silex-id-1484949224320-1">
+        <div data-silex-type="container-element" class="editable-style silex-element-content website-width silex-id-1484949224320-0 container-element" data-silex-id="silex-id-1484949224320-0"><div data-silex-type="text-element" class="editable-style silex-id-1552774225668-8 text-element prevent-resizable silex-component hide-on-desktop mobile-menu nav prevent-auto-z-index" data-silex-id="silex-id-1552774225668-8"><div class="silex-element-content normal"><style>.website-width {width: 960px;}@media (max-width: 960px) {.silex-editor {min-width: 1160px;}}</style>
+<!-- inspired by https://codepen.io/erikterwan/pen/EVzeRP -->
+<div class="hamburger-menu_1563834242930_806 closed">
+    <div class="hamburger-btn ">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-container">
+      <div class="prevent-scale">
+        <nav role="navigation" class="">
+            <ul>
+            
+                <li><a href="#!page-home" class="page-link-active">Home</a></li>
+            
+                <li><a href="#!page-menu">Menu</a></li>
+            
+                <li><a href="#!page-team">Team</a></li>
+            
+                <li><a href="#!page-info">Info</a></li>
+            
+                <li><a href="https://www.silex.me" target="_blank">External link</a></li>
+            
+            </ul>
+        </nav>
+      </div>
+  </div>
+</div>
+<script type="text/javascript">
+(function() {
+  var isOpen = false;
+  function close() {
+    isOpen = false;
+    $('.hamburger-menu_1563834242930_806').removeClass('open');
+    $('.hamburger-menu_1563834242930_806').addClass('closed');
+  }
+  function open() {
+    isOpen = true;
+    $('.hamburger-menu_1563834242930_806').addClass('open');
+    $('.hamburger-menu_1563834242930_806').removeClass('closed');
+  }
+  function toggle() {
+    if(isOpen) close();
+    else open();
+  }
+  var silexElement = $('.hamburger-menu_1563834242930_806').closest('.editable-style');
+  function move(data) {
+    var offset = silexElement.offset();
+    $('.hamburger-menu_1563834242930_806 .nav-container').css({
+      'transform': 'translate(' + (data.scrollLeft - (offset.left/data.scale)) + 'px, ' + (data.scrollTop - (offset.top/data.scale)) + 'px)'
+    });
+  }
+  $('.hamburger-menu_1563834242930_806 .hamburger-btn').click(function() { toggle(); });
+  $(document).on('silex.scroll silex.resize', function(e, data) {
+    close();
+    move(data);
+  });
+  close();
+})();
+</script>
+</div></div><div data-silex-type="container-element" class="editable-style silex-id-1552774237438-9 container-element hide-on-desktop" data-silex-id="silex-id-1552774237438-9"></div><div data-silex-type="text-element" class="editable-style text-element silex-id-1424647173853 page-link-active" data-silex-id="silex-id-1424647173853" style="" data-silex-href="#!page-home">
+                <div class="silex-element-content normal">
+                    <h1>Food &amp; Drinks
+                </h1></div>
+            </div>
+            
+            <div data-silex-type="image-element" class="editable-style image-element silex-id-1424647165395" data-silex-id="silex-id-1424647165395"><img src="../../../../../libs/templates/silex-templates/food-and-drink/assets/post%20divider_scroll.png" class="silex-element-content">
+            </div>
+            <div data-silex-type="container-element" class="editable-style silex-id-1424710230648 container-element hide-on-mobile" data-silex-id="silex-id-1424710230648">
+                <div data-silex-type="container-element" class="editable-style   container-element silex-id-1424710433398 editable-plugin-created" data-silex-id="silex-id-1424710433398">
+                    <div data-silex-type="text-element" class="editable-style text-element silex-id-1424710332527 nav-element nav" data-silex-id="silex-id-1424710332527">
+                        <div class="silex-element-content normal"><a href="#!page-home" class="page-link-active">
+                            HOME
+                        </a></div>
+                    </div>
+                </div>
+                <div data-silex-type="container-element" class="editable-style silex-id-1426536866650 editable-plugin-created container-element" data-silex-id="silex-id-1426536866650">
+                    <div data-silex-type="text-element" class="editable-style text-element nav-element silex-id-1434425184890-0 nav" data-silex-id="silex-id-1434425184890-0">
+                        <div class="silex-element-content normal"><a href="#!page-menu" class="">
+                            MENU
+                        </a></div>
+                    </div>
+                </div>
+                <div data-silex-type="container-element" class="editable-style editable-plugin-created container-element silex-id-1434634286306-0" data-silex-id="silex-id-1434634286306-0">
+
+                    <div data-silex-type="text-element" class="editable-style text-element nav-element silex-id-1434634286307-1 nav" data-silex-id="silex-id-1434634286307-1">
+                        <div class="silex-element-content normal">
+                            <a href="#!page-team" class="">TEAM</a>
+                        </div>
+                    </div>
+                </div>
+                <div data-silex-type="container-element" class="editable-style editable-plugin-created container-element silex-id-1434634331833-2" data-silex-id="silex-id-1434634331833-2">
+
+                    <div data-silex-type="text-element" class="editable-style text-element nav-element silex-id-1434634331834-3 nav" data-silex-id="silex-id-1434634331834-3">
+                        <div class="silex-element-content normal">
+                            <a href="#!page-info" class="">INFO</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    ﻿</div>
+
+
+
+
+
+
+
+
+
+
+    <div data-silex-type="container-element" class="container-element website-min-width editable-style silex-id-1484949486466-5 section-element page-home paged-element prevent-resizable" data-silex-id="silex-id-1484949486466-5">
+        <div data-silex-type="container-element" class="editable-style silex-element-content website-width silex-id-1484949486465-4 container-element" data-silex-id="silex-id-1484949486465-4">
+            <div data-silex-type="text-element" class="editable-style text-element silex-id-1424920356950 paragraph" data-silex-id="silex-id-1424920356950">
+                <div class="silex-element-content normal">
+                    <h2>Le service à la Française</h2>
+                    
+                        <p>Commodo ad ut, picanha ex eiusmod nulla ground round occaecat. Rump fatback sint tail nulla corned beef short loin, picanha commodo strip steak est shank meatball excepteur. Proident mollit do ullamco. Meatloaf culpa ham hock short
+                            ribs chuck filet mignon spare ribs landjaeger kielbasa et. Ullamco porchetta short ribs, meatloaf venison pork belly do shank flank esse tri-tip nostrud. Aliqua esse minim bacon eu nulla fatback pariatur kielbasa pork chop
+                            voluptate adipisicing nisi ribeye. Reprehenderit kielbasa shankle short loin est et filet mignon shank meatball pig.</p>
+                    
+                </div>
+            </div>
+            <div data-silex-type="container-element" class="editable-style silex-id-1425063529504 container-element" data-silex-id="silex-id-1425063529504"></div>
+            <div data-silex-type="text-element" class="editable-style text-element silex-id-1424921460631 paragraph" data-silex-id="silex-id-1424921460631">
+                <div class="silex-element-content normal">
+                    <h2>Friendly atmosphere&nbsp;</h2>
+                    <h3>With real people</h3>
+                </div>
+            </div>
+            <div data-silex-type="text-element" class="editable-style silex-id-1434426151026-1 text-element paragraph" data-silex-id="silex-id-1434426151026-1">
+                <div class="silex-element-content normal">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum.&nbsp;</p>
+                </div>
+            </div>
+            <div data-silex-type="container-element" class="editable-style silex-id-1425063611139 container-element" data-silex-id="silex-id-1425063611139"></div>
+            <div data-silex-type="container-element" class="editable-style silex-id-1425063401661 container-element hide-on-mobile" data-silex-id="silex-id-1425063401661"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <div data-silex-type="container-element" class="container-element website-min-width editable-style silex-id-1484949640479-7 section-element page-menu paged-element prevent-resizable" data-silex-id="silex-id-1484949640479-7">
+        <div data-silex-type="container-element" class="editable-style silex-element-content website-width silex-id-1484949640479-6 container-element" data-silex-id="silex-id-1484949640479-6">
+            <div data-silex-type="text-element" class="editable-style text-element paragraph silex-id-1434426485636-2" data-silex-id="silex-id-1434426485636-2">
+                <div class="silex-element-content normal"><p><br></p>
+                    <h2>A Friendly Atmosphere&nbsp;</h2>
+                </div>
+            </div>
+            <div data-silex-type="text-element" class="editable-style text-element paragraph silex-id-1434426485665-3" data-silex-id="silex-id-1434426485665-3">
+                <div class="silex-element-content normal">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&nbsp;</p>
+                </div>
+            ﻿﻿﻿</div>
+            <div data-silex-type="container-element" class="editable-style silex-id-1434426787582-9 container-element" data-silex-id="silex-id-1434426787582-9" style=""></div>
+            <div data-silex-type="text-element" class="editable-style text-element paragraph silex-id-1434426613625-5" data-silex-id="silex-id-1434426613625-5">
+                <div class="silex-element-content normal"><p></p><p><br></p><h2>With Real <br>People</h2></div>
+            </div>
+            <div data-silex-type="text-element" class="editable-style text-element paragraph silex-id-1434426613658-6" data-silex-id="silex-id-1434426613658-6">
+                <div class="silex-element-content normal">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+
+
+<div data-silex-type="container-element" class="container-element editable-style silex-id-1538167171167-15 section-element paged-element page-info prevent-resizable" data-silex-id="silex-id-1538167171167-15"><div data-silex-type="container-element" class="editable-style silex-id-1538167171162-14 container-element silex-element-content website-width" data-silex-id="silex-id-1538167171162-14"><div data-silex-type="text-element" class="editable-style text-element paragraph caption silex-id-1538166900880-13" data-silex-id="silex-id-1538166900880-13" style="">
+                <div class="silex-element-content normal">
+                    <p>
+                        <br>
+                    </p>
+                    <p>Nothing here yet. Waiting for your content...</p>
+                </div>
+            </div></div></div><div data-silex-type="container-element" class="container-element editable-style silex-id-1538167211265-17 section-element paged-element page-team prevent-resizable" data-silex-id="silex-id-1538167211265-17"><div data-silex-type="container-element" class="editable-style silex-id-1538167211260-16 container-element silex-element-content website-width" data-silex-id="silex-id-1538167211260-16"><div data-silex-type="text-element" class="editable-style text-element paragraph silex-id-1471343044963-3 caption" data-silex-id="silex-id-1471343044963-3" style="">
+                <div class="silex-element-content normal">
+                    <p>
+                        <br>
+                    </p>
+                    <p>Nothing here yet. Waiting for your content...</p>
+                </div>
+            </div></div></div><div data-silex-type="container-element" class="container-element editable-style silex-id-1484949434473-3 section-element website-min-width footer-container prevent-resizable" data-silex-id="silex-id-1484949434473-3">
+        <div data-silex-type="container-element" class="editable-style silex-element-content website-width silex-id-1484949434473-2 container-element" data-silex-id="silex-id-1484949434473-2">
+            <div data-silex-type="text-element" class="editable-style silex-id-1425063986632 text-element footer" data-silex-id="silex-id-1425063986632" style="">
+                <div class="silex-element-content normal">
+                    <p><a href="http://www.silex.me/">Powered by Silex</a>&nbsp;<a href="http://www.silex.me/">website builder</a> -&nbsp;<a href="http://www.wix.com/demone2/city-bakery">Inspired by this template</a>&nbsp;- <a href="https://unsplash.com/">Photos from here</a>&nbsp;-
+                    <a href="http://www.colorcombos.com/color-schemes/253/ColorCombo253.html">Color palete</a></p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body></html>
