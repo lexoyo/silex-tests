@@ -23,3 +23,5 @@ fields:
   name: silex-id-1604500047518-7
   label: html-element
   default: "<p>New <strong>HTML</strong> box</p>"
+pages:
+- test3.md
