@@ -1,6 +1,6 @@
 ---
 label: Page 3
-hide_body: false
+hide_body: true
 fields:
 - type: textarea
   name: silex-id-1442914737143-3
