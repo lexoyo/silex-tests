@@ -20,14 +20,10 @@ fields:
       wysiwyg: true
       schema:
         format: html
-  - type: image_gallery
-    name: silex-id-1604500047518-7
-    label: html-element
-    default: <p>New <strong>HTML</strong> box</p>
   - name: layout
     type: text
     config:
       required: true
       hidden: true
       label: layout
-      default: page-3.yml
+      default: page-4.yml
