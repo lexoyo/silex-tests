@@ -4,7 +4,7 @@
 
 body {
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 98vw; /* remove approx size of vertical scroll bar */
 }
 
 /* prevent-auto-z-index is to let the components handle their z-index */
@@ -19,7 +19,7 @@ body {
   display: none;
 }
 /* resize */
-.editable-style.image-element .silex-element-content {
+.editable-style.image-element img {
   border-radius: inherit; /* this is to follow the element's radius */
 	width: 100%;
 	height: 100%;
@@ -28,12 +28,16 @@ body {
  .image-element > .silex-element-content {
 	overflow: hidden;
 }
-.silex-element-content {
-	border-radius: initial;
-	min-height:inherit;
-	width: 100%;
-}
 */
+.html-element .silex-element-content {
+  /* enable HTML content to have style="min-height: inherit;" */
+  /* removed because it makes components buggy, add it to silex if you need to
+  position: absolute;
+  min-height: inherit;
+  width: 100%; /* needed by slideshow components and probably others */
+  /*
+  height: 100%; /* needed by slideshow kreview and probably others */
+}
 /* wysihtml text editor styles */
 .wysiwyg-float-left {
   float: left;
@@ -54,12 +58,19 @@ body.enable-mobile .editable-style.hide-on-desktop {
   display: none;
 }
 /* only outside the editor */
-.silex-runtime .fixed {
+/* needs to be more qualified than body.enable-mobile .editable-style:not(.prevent-mobile-style) */
+body.silex-runtime.body-initial .fixed {
   position: absolute;
   z-index: 20;
 }
 /* Mobile styles */
 @media (max-width:480px) {
+  /* needs to be more qualified than body.enable-mobile .editable-style:not(.prevent-mobile-style) */
+  body.silex-runtime.body-initial .fixed {
+    /* on mobile (chrome, this is needed to be on top of other content) */
+    position: relative;
+  }
+
   /* hide horizontal scroll bar which appears because of residual values in css
   html {
     overflow-x: hidden;
@@ -99,7 +110,7 @@ body.enable-mobile .editable-style.hide-on-desktop {
     padding: 0;
     margin: 0;
   }
-  body.enable-mobile .container-element {
+  body.enable-mobile .container-element:not(.paged-element-hidden) {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -109,11 +120,26 @@ body.enable-mobile .editable-style.hide-on-desktop {
   body.enable-mobile .editable-style.hide-on-mobile {
     display: none;
   }
-  body.enable-mobile .editable-style.hide-on-desktop {
+  body.enable-mobile .editable-style.hide-on-desktop:not(.paged-element-hidden) {
     display: initial;
   }
   body.silex-runtime.enable-mobile .background.background-initial {
     max-width: 100%;
+  }
+}
+
+/* only outside the editor */
+/* needs to be more qualified than body.enable-mobile .editable-style:not(.prevent-mobile-style) */
+body.silex-runtime.body-initial .fixed {
+  position: absolute;
+  z-index: 20;
+}
+/* Mobile styles */
+@media (max-width:480px) {
+  /* needs to be more qualified than body.enable-mobile .editable-style:not(.prevent-mobile-style) */
+  body.silex-runtime.body-initial .fixed {
+    /* on mobile (chrome, this is needed to be on top of other content) */
+    position: relative;
   }
 }
 
