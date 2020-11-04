@@ -2,6 +2,11 @@
 label: Page 2
 hide_body: false
 fields:
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
 - type: textarea
   name: silex-id-1442914737143-3
   label: text-element
