@@ -2,7 +2,7 @@
 name: page-2.yml
 label: Page 2
 fields:
-  - type: text
+  - type: textarea
     name: silex-id-1604481199756-35
     label: text-element
     default: >-
