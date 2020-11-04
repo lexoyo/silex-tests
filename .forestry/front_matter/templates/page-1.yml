@@ -1,6 +1,18 @@
 ---
+name: page-1.yml
 label: Page 1
-hide_body: false
 fields:
-- type: text
-- type: text
+  - type: text
+    name: silex-id-1604481199082-34
+    label: text-element
+    default: >-
+      <p>Page 1<br></p><p>Powered by <a href="https://www.silex.me/"
+      target="_blank" title="Silex website builder,  free and open source">Silex
+      website builder</a></p>
+  - type: text
+    name: silex-id-1604481216725-39
+    label: text-element
+    default: >-
+      <p>Page ALL<br></p><p>Powered by <a href="https://www.silex.me/"
+      target="_blank" title="Silex website builder,  free and open source">Silex
+      website builder</a></p>
