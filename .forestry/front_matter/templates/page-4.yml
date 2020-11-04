@@ -26,3 +26,5 @@ fields:
   default: page-4.yml
   config:
     required: true
+pages:
+- test4.md
