@@ -140,7 +140,7 @@ $(function() {
         'transform': 'scale(' + ratio + ')',
         'transform-origin': '0 0',
         'min-width': getScaleBreakPoint() + 'px',
-        'height': Math.round(window.innerHeight * ratio), // min-height does not work here since content is bigger before transform
+        'height': Math.round($win.height() * ratio),
       });
       // unscale some elements
       $('.prevent-scale').css({
@@ -171,10 +171,12 @@ $(function() {
 
     // update the body scale
     $('.fixed').css({
+      'position': '',
       'transform': 'translate(' + offsetLeft + 'px, ' + offsetTop + 'px)',
       'transform-origin': '0 0'
     });
     $('.fixed.prevent-scale').css({
+      'position': '',
       'transform': 'translate(' + offsetLeft + 'px, ' + offsetTop + 'px) scale(' + (1/ratio) + ')',
       'transform-origin': '0 0'
     });
