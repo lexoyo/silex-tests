@@ -4,3 +4,5 @@ hide_body: false
 fields:
 - type: text
 - type: text
+pages:
+- test.md
