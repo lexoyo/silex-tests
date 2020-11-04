@@ -26,7 +26,7 @@ fields:
 - name: layout
   type: text
   config:
-    required: false
+    required: true
   label: layout
   default: page-3
   hidden: true
