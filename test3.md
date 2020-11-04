@@ -7,6 +7,7 @@ silex-id-1604500047518-7:
 - "/uploads/alexhoyau.jpg"
 - "/uploads/stastic.png"
 - "<p>New <strong>HTML</strong> box</p>"
+layout: ''
 
 ---
-content=====
+1content=====
