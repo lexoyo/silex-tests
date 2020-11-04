@@ -30,3 +30,5 @@ fields:
   label: layout
   default: page-3
   hidden: true
+pages:
+- test3.md
