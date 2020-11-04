@@ -6,7 +6,7 @@ webhook_url:
 sections:
 - type: directory
   path: ''
-  label: Test fm templates generator
+  label: Pages
   create: all
   match: "**/*"
   templates:
