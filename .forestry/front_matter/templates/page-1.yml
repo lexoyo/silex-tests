@@ -6,6 +6,10 @@ fields:
     name: silex-id-1442914737143-3
     label: text-element
     default: <p>Page ALL<br></p><p>NO FORESTRY<br></p>
+    condig:
+      wysiwyg: true
+      schema:
+        format: html
   - type: text
     name: silex-id-1604481199082-34
     label: text-element
@@ -20,3 +24,7 @@ fields:
       <p>Page ALL<br></p><p>Powered by <a href="https://www.silex.me/"
       target="_blank" title="Silex website builder,  free and open source">Silex
       website builder</a></p>
+    condig:
+      wysiwyg: true
+      schema:
+        format: html
