@@ -1,0 +1,5 @@
+name: page-2.yml
+label: Page 2
+fields:
+  - type: text
+  - type: text
