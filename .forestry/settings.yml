@@ -10,6 +10,7 @@ sections:
   create: all
   match: "**/*"
   templates:
+  - page-3
   - page-1
   - page-2
 upload_dir: uploads
