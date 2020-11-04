@@ -1,5 +1,6 @@
-name: page-1.yml
+---
 label: Page 1
+hide_body: false
 fields:
-  - type: text
-  - type: text
+- type: text
+- type: text
