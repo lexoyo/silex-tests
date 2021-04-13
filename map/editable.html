@@ -15,7 +15,7 @@
 
     <style type="text/css" class="silex-style"></style>
     <script type="text/javascript" class="silex-script"></script>
-    <style class="silex-inline-styles" type="text/css">.body-initial {background-color: rgba(255,255,255,1); position: static;}.silex-id-1478366444112-1 {background-color: transparent; position: static; margin-top: -1px;}.silex-id-1478366444112-0 {background-color: transparent; min-height: 100px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1474394621033-3 {position: static; margin-top: -1px;}.silex-id-1474394621032-2 {background-color: transparent; min-height: 600px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1478366450713-3 {background-color: transparent; position: static; margin-top: -1px;}.silex-id-1478366450713-2 {background-color: transparent; min-height: 100px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1442914737143-3 {width: 241px; top: 26px; left: 494px; min-height: 51px; position: absolute;}.silex-id-1618327994359-9 {width: 400px; height: 400px; background-color: transparent; position: absolute; top: 108px; left: 340px;}@media only screen and (max-width: 480px) {}</style>
+    <style class="silex-inline-styles" type="text/css">.body-initial {background-color: rgba(255,255,255,1); position: static;}.silex-id-1478366444112-1 {background-color: transparent; position: static; margin-top: -1px;}.silex-id-1478366444112-0 {background-color: transparent; min-height: 100px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1474394621033-3 {position: static; margin-top: -1px;}.silex-id-1474394621032-2 {background-color: transparent; min-height: 600px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1478366450713-3 {background-color: transparent; position: static; margin-top: -1px;}.silex-id-1478366450713-2 {background-color: transparent; min-height: 100px; position: relative; margin-left: auto; margin-right: auto;}.silex-id-1442914737143-3 {width: 241px; top: 26px; left: 494px; min-height: 51px; position: absolute;}.silex-id-1618327994359-9 {width: 400px; height: 400px; background-color: transparent; position: absolute; top: 92px; left: 36px;}.silex-id-1618328546455-10 {width: 551px; min-height: 427px; background-color: rgb(255, 255, 255); position: absolute; top: 97px; left: 572px;}@media only screen and (max-width: 480px) {}</style>
     <title></title>
     
 
@@ -85,7 +85,19 @@ init_1618327994533_34();
 // });
 
 </script>
-</div></div></div>
+</div></div><div data-silex-type="html-element" class="editable-style html-element silex-id-1618328546455-10 page-page-1 paged-element" data-silex-id="silex-id-1618328546455-10" style=""><div class="silex-element-content">    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.css" rel="stylesheet">
+
+    <div id="map"></div>
+    <script>
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'https://api.maptiler.com/maps/bright/style.json?key=<key>',
+            center: [8.5456, 47.3739],
+            zoom: 11
+        });
+    </script>
+    </div></div></div>
     </section>
     <section data-silex-type="container-element" class="container-element editable-style silex-id-1478366450713-3 section-element prevent-resizable" data-silex-id="silex-id-1478366450713-3" style="">
         <div data-silex-type="container-element" class="editable-style silex-element-content silex-id-1478366450713-2 container-element website-width" data-silex-id="silex-id-1478366450713-2">
