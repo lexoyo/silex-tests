@@ -20,7 +20,7 @@
         var parent = $(this).parent()
         $(this)
         .css({
-            'left': $(parent).position().left
+            'left': $(this).offset().left + $(parent).position().left
         })
     })
     .appendTo(document.body)
