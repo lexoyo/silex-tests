@@ -15,7 +15,15 @@
 
     <style type="text/css" class="silex-style"></style>
     <script type="text/javascript" class="silex-script">$(function() {
-    $('.fixed').appendTo(document.body)
+    $('.fixed')
+    .each(function() {
+        var parent = $(this).parent()
+        $(this)
+        .css({
+            'left': -$(parent).position().left
+        })
+    })
+    .appendTo(document.body)
     $('.scroll-fixed')
     .css({
         'position': 'relative',
