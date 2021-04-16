@@ -18,7 +18,7 @@
     $('.fixed')
     .each(function() {
         var parent = $(this).parent()
-        console.log($(this).css('left'))
+        console.log($(this).css('left'), $(this).offset().left, $(this).position().left)
         $(this)
         .css({
             'left': $(this).offset().left + $(parent).position().left
