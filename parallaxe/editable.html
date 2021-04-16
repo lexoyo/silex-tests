@@ -19,6 +19,7 @@
     .each(function() {
         var parent = $(this).parent()
         console.log($(this).css('left'), $(this).offset().left, $(this).position().left)
+        console.log($(parent).css('left'), $(parent).offset().left, $(parent).position().left)
         $(this)
         .css({
             'left': $(this).offset().left + $(parent).position().left
