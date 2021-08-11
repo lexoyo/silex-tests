@@ -14,6 +14,13 @@ sections:
   - page-3
   - page-1
   - page-2
+- type: directory
+  path: pages-with-modules
+  label: Pages w/ modules
+  create: documents
+  match: "**/*"
+  templates:
+  - test-modules
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''

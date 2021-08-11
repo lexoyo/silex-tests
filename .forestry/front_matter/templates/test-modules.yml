@@ -27,6 +27,7 @@ fields:
   label: Modules
   template_types:
   - icon-module
+  - side-image-module
   config:
     min: 
     max: 
