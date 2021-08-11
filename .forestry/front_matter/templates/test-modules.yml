@@ -31,3 +31,5 @@ fields:
   config:
     min: 
     max: 
+pages:
+- pages-with-modules/test-modules.md
