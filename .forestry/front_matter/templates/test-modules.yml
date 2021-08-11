@@ -1,7 +1,27 @@
 ---
-label: test-modules
+label: Template
 hide_body: true
 fields:
+- name: permalink
+  type: text
+  config:
+    required: false
+  label: Permalink
+- name: seo
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: description
+    type: text
+    config:
+      required: false
+    label: Description
+  label: SEO
 - name: modules
   type: blocks
   label: Modules
