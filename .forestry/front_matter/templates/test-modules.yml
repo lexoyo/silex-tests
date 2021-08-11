@@ -1,4 +1,12 @@
 ---
 label: test-modules
 hide_body: true
-fields: []
+fields:
+- name: modules
+  type: blocks
+  label: Modules
+  template_types:
+  - icon-module
+  config:
+    min: 
+    max: 
